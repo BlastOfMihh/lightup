@@ -27,8 +27,7 @@ func _during_state(delta):
 	# pr.rotation = pr.get_local_mouse_position().angle()
 	# pr.velos = (pr.get_local_mouse_position().normalized()*100)#add_v
 	pr.velos=add_v
-	pr.apply_velos(delta)
-	print("cursor mdf")
+	# pr.apply_velos(delta)
 
 	# pr.rotation += PI/20
 

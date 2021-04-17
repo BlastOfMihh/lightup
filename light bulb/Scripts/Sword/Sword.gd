@@ -14,7 +14,6 @@ func setup(point:Position2D):
 func chase_rooster(delta):
 	if point2rooster:
 		velos=(point2rooster.global_position-position)*speed
-		apply_velos(delta)
 
 func apply_velos(delta):
 	velos=move_and_slide(velos)

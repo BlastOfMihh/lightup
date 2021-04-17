@@ -1,7 +1,7 @@
 extends Node2D
 
 export var r=5
-var ang=0.0
+export var ang=0.0
 onready var sword_pos=preload("res://Scenes/SwordPos.tscn")
 
 

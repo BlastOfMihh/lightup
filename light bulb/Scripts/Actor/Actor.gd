@@ -13,8 +13,11 @@ func update_dir():
 
 func update_velos(delta):
 	velos=dir*speed
+
+func apply_velos(delta):
 	velos=move_and_slide(velos, Vector2.UP)
 
 func _physics_process(delta):
 	update_dir()
 	update_velos(delta)
+	apply_velos(delta)
