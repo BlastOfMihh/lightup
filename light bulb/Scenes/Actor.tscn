@@ -17,8 +17,6 @@ script = ExtResource( 2 )
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 3 )
 
-[node name="Node" type="Node" parent="StateMachine"]
-
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Visuals"]
@@ -73,3 +71,5 @@ script = ExtResource( 6 )
 [node name="Sword3" parent="SwordHandler" instance=ExtResource( 5 )]
 
 [node name="Sword12" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="Node" type="Node" parent="."]
