@@ -14,7 +14,7 @@ zoom = Vector2( 5, 5 )
 position = Vector2( 6.35675, 12.7135 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -5.2973, 57.211 )
+position = Vector2( -3.7081, 116.541 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
@@ -22,4 +22,4 @@ position = Vector2( -11.7136, -205.93 )
 shape = SubResource( 1 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4.74997, -44.6087 )
+position = Vector2( 92.6854, 55.5106 )
