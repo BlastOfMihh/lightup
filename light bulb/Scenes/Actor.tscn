@@ -10,7 +10,7 @@
 [ext_resource path="res://Scripts/Actor/States/RotatingAttack.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/Actor/States/Idle.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/Actor/States/Stand.gd" type="Script" id=10]
-[ext_resource path="res://Scripts/StatesShower.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/StateMachineShower.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Actor/States/Walk.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -111,12 +111,4 @@ script = ExtResource( 6 )
 
 [node name="Sword12" parent="SwordHandler" instance=ExtResource( 5 )]
 
-[node name="Node" type="Node" parent="."]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="RichTextLabel" parent="." instance=ExtResource( 11 )]

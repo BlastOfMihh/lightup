@@ -4,6 +4,9 @@ var velos=Vector2.ZERO
 var dir=Vector2.ZERO
 var speed=200
 
+onready var sh=$SwordHandler
+onready var sm=$StateMachine
+
 func _ready():
 	pass
 
@@ -19,5 +22,5 @@ func apply_velos(delta):
 
 func _physics_process(delta):
 	update_dir()
-	update_velos(delta)
+	# update_velos(delta)
 	apply_velos(delta)
