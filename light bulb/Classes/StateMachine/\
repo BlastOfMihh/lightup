@@ -1,0 +1,45 @@
+extends Node
+class_name StateMachine
+
+var states={}
+var active_states=[]
+
+func _ready():
+	# yield(get_tree().root, "ready")
+	yield(self, "ready")
+	for x in get_children():
+		states[x.state_name]=x
+		x.pr=get_parent()
+	for x in get_children():
+		if x.active:
+			request_state(x.state_name)
+
+func _process(delta):
+	for s in active_states:
+		var st=states[s]
+		var newst=st.get_transition()
+		st._during_state(delta)
+		if newst!=null:
+			if newst=="exit":
+				active_states.erase(st.state_name)
+			else:
+				request_state(newst)
+	pass
+
+func deactivate(s):
+	active_states.erase(s)
+
+func request_state(st)->bool:
+	var cur=states[st]
+	if !cur.has_dependecies():
+		return false
+	if cur.is_in_conflict():
+		return false
+
+	for s in cur.removing_states:
+		if active_states.has(s):
+			deactivate(s)
+
+	active_states.push_back(st)
+	return true
+

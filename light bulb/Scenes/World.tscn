@@ -1,0 +1,127 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://rubber.gd" type="Script" id=1]
+[ext_resource path="res://rubber2.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/KinematicBody2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/rubber/Player.tscn" type="PackedScene" id=5]
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 51.3689, 43.0475 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 27.8047
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1082.17, 561.573 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 216.767, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 31.8961, 31.9177 )
+
+[node name="World" type="Node2D"]
+
+[node name="rubber" type="KinematicBody2D" parent="."]
+position = Vector2( -874.17, 199.902 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rubber"]
+modulate = Color( 1, 0.678431, 0, 1 )
+shape = SubResource( 1 )
+
+[node name="rubber3" type="KinematicBody2D" parent="."]
+position = Vector2( -764.367, 199.764 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rubber3"]
+modulate = Color( 1, 0, 0, 1 )
+shape = SubResource( 1 )
+
+[node name="rubber2" type="KinematicBody2D" parent="."]
+position = Vector2( -458.621, 108.297 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rubber2"]
+modulate = Color( 1, 0, 0, 1 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -17.6388, 2.51978 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 61.5903, 799.606 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 19.828, -1163.87 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -2000.96, -43.7263 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1969.4, -69.4172 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -752.151, 109.376 )
+rotation = 0.600703
+shape = SubResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 4.93378, -204.501 )
+current = true
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( -148.637, 108.888 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -142.637, -210.112 )
+rotation = -0.71736
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 541.06, 169.348 )
+mass = 20.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+modulate = Color( 1, 0.423529, 0.423529, 1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+visible = false
+shape = SubResource( 5 )
+
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -146.249, -77.162 )
+
+[node name="KinematicBody2D4" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.760784, 0.733333, 0.0745098, 1 )
+position = Vector2( 92.1698, -101.761 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 394.638, 182.195 )
