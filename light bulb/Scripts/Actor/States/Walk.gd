@@ -18,6 +18,4 @@ func exit_state(new_states):
 	pass
 
 func _during_state(delta):
-	print("pr.update_velos(delta)")
 	pr.update_velos(delta)
-	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Actor/174810556_182825730327558_2033269357675319731_n.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Actor/Actor.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scripts/Actor/States/Stand.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/StateMachineShower.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Actor/States/Walk.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/Actor/States/Stagger.gd" type="Script" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.13219, 7.12121 )
@@ -29,12 +30,70 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="Animation" id=4]
+resource_name = "move_rooster1"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("SwordRooster:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.110627, -9.31458, 1, -0.274027, 17.3087, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("SwordRooster:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0, 0.8, -0.237472, 10.8174, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SwordRooster:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -64.139, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("SwordRooster:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -27.7417, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "turn_red"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.211765, 0.211765, 1 ) ]
+}
+
 [node name="Actor" type="KinematicBody2D"]
 position = Vector2( 19.7034, 1.1031 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
+
+[node name="RichTextLabel" parent="." instance=ExtResource( 11 )]
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 3 )
@@ -46,6 +105,9 @@ active = true
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource( 12 )
 
+[node name="Stagger" type="Node" parent="StateMachine"]
+script = ExtResource( 13 )
+
 [node name="RotatingAttack" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
 
@@ -54,6 +116,7 @@ script = ExtResource( 7 )
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 9 )
+active = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -69,7 +132,7 @@ current = true
 zoom = Vector2( 0.4, 0.4 )
 
 [node name="SwordRooster" type="Node2D" parent="."]
-position = Vector2( -141.331, -58.0594 )
+position = Vector2( -64.139, -27.7417 )
 scale = Vector2( 1, 0.5 )
 script = ExtResource( 4 )
 __meta__ = {
@@ -81,34 +144,26 @@ script = ExtResource( 6 )
 
 [node name="Sword" parent="SwordHandler" instance=ExtResource( 5 )]
 
-[node name="Sword10" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword13" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword14" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword15" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword16" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword17" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword18" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword19" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword20" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword21" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword22" parent="SwordHandler" instance=ExtResource( 5 )]
-
 [node name="Sword2" parent="SwordHandler" instance=ExtResource( 5 )]
-
-[node name="Sword11" parent="SwordHandler" instance=ExtResource( 5 )]
 
 [node name="Sword3" parent="SwordHandler" instance=ExtResource( 5 )]
 
-[node name="Sword12" parent="SwordHandler" instance=ExtResource( 5 )]
+[node name="Sword4" parent="SwordHandler" instance=ExtResource( 5 )]
 
-[node name="RichTextLabel" parent="." instance=ExtResource( 11 )]
+[node name="Sword5" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="Sword6" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="Sword7" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="Sword8" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="Sword9" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="Sword10" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="Sword11" parent="SwordHandler" instance=ExtResource( 5 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/move_rooster1 = SubResource( 4 )
+anims/turn_red = SubResource( 3 )

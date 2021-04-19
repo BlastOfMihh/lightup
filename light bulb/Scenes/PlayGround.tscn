@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Actor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Area2D.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 216.584, 10 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CircleShape2D" id=2]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2( 5, 5 )
+[node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 6.35675, 12.7135 )
@@ -23,3 +23,15 @@ shape = SubResource( 1 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 41.9636, 21.7402 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 101.33, 28.9896 )
+scale = Vector2( 4.3928, -1.11239 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

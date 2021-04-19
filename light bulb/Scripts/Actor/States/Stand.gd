@@ -2,7 +2,7 @@ extends State
 
 func _ready():
 	conflicting_states=[]
-	removing_states=["Walk"]
+	removing_states=["Walk","Stagger"]
 	necessary_states=[]
 
 func get_transition():
