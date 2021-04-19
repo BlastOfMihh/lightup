@@ -18,4 +18,6 @@ func exit_state(new_states):
 	pass
 
 func _during_state(delta):
+	if Input.is_action_just_pressed("retreive"):
+		pr.sh.retreive()
 	pass
