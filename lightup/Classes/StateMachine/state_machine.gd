@@ -6,6 +6,7 @@ var active_states=[]
 
 func _ready():
 	# yield(get_tree().root, "ready")
+	# yield(get_parent(), "ready")
 	yield(self, "ready")
 	for x in get_children():
 		states[x.state_name]=x

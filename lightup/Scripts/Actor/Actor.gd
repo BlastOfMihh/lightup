@@ -7,6 +7,7 @@ var speed=200
 onready var sh=$SwordHandler
 onready var sm=$StateMachine
 onready var ap=$AnimationPlayer
+onready var sp=$Visuals/AnimatedSprite
 
 func _ready():
 	Globals.actor=self

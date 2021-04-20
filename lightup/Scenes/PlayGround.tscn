@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Area2D.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/tilebeta.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 216.584, 10 )
@@ -10,8 +11,14 @@ extents = Vector2( 216.584, 10 )
 
 [node name="Node2D" type="Node2D"]
 
+[node name="SceneTile" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3, -2 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 6.35675, 12.7135 )
+position = Vector2( -2.778, -0.551193 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -3.7081, 116.541 )
@@ -22,10 +29,10 @@ position = Vector2( -11.7136, -205.93 )
 shape = SubResource( 1 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
-position = Vector2( 41.9636, 21.7402 )
+position = Vector2( -126.036, 41.7402 )
 
 [node name="damage" type="Area2D" parent="."]
-position = Vector2( 101.33, 28.9896 )
+position = Vector2( 138.408, -45.5082 )
 scale = Vector2( 4.3928, -1.11239 )
 script = ExtResource( 2 )
 __meta__ = {
