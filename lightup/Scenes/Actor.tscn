@@ -108,8 +108,11 @@ tracks/0/keys = {
 }
 
 [node name="Actor" type="KinematicBody2D"]
-position = Vector2( 19.7034, 1.1031 )
+position = Vector2( 18.7113, 3.68263 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="RichTextLabel" parent="." instance=ExtResource( 11 )]
 
@@ -144,7 +147,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Visuals"]
 frames = SubResource( 2 )
 animation = "attack"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
