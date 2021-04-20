@@ -41,7 +41,7 @@ _global_script_class_icons={
 config/name="lightbulb"
 run/main_scene="res://Scenes/PlayGround.tscn"
 boot_splash/bg_color=Color( 0.654902, 0.505882, 0.505882, 1 )
-config/icon="res://Assets/File.png"
+config/icon="res://Assets/SwordsAtlas.png"
 
 [autoload]
 

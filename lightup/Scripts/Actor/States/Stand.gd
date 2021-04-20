@@ -10,7 +10,11 @@ func get_transition():
 		return "Walk"
 	return null
 
+
 func enter_state(old_states):
+	if pr.sp!=null:
+		pr.sp.play("stand")
+	# yield(get_tree().root, "ready")
 	pass
 
 func exit_state(new_states):
