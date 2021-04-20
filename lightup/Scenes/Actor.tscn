@@ -168,6 +168,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+rotating = true
 
 [node name="SwordHandler" type="Node" parent="."]
 script = ExtResource( 6 )

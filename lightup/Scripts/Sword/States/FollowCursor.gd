@@ -3,7 +3,7 @@ extends State
 
 func _ready():
 	conflicting_states=[]
-	removing_states=[]
+	removing_states=["RotateAfterCursor"]
 	necessary_states=[]
 
 func get_transition():
