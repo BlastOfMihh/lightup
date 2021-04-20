@@ -1,8 +1,7 @@
-extends KinematicBody2D
+extends MBody
 
 onready var sm=$StateMachine
 
-var velos=Vector2.ZERO
 var point2rooster
 
 export var speed=5
@@ -17,9 +16,6 @@ func look_at_mouse():
 func chase_rooster(delta):
 	if point2rooster:
 		velos=(point2rooster.global_position-position)*speed
-
-func apply_velos(delta):
-	velos=move_and_slide(velos)
 
 func _physics_process(delta):
 	velos=move_and_slide(velos)

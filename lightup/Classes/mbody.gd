@@ -1,5 +1,5 @@
 extends KinematicBody2D
-class_name Body
+class_name MBody
 
 var velos:=Vector2.ZERO
 
@@ -8,3 +8,7 @@ func add_gravity():
 
 func add_velocity(add:Vector2):
 	velos+=add
+
+func apply_velos(delta):
+	velos=move_and_slide(velos, Vector2.UP)
+	# print("apply velos")

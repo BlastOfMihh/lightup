@@ -1,6 +1,5 @@
-extends KinematicBody2D
+extends MBody
 
-var velos=Vector2.ZERO
 var dir=Vector2.ZERO
 var speed=200
 
@@ -11,7 +10,6 @@ onready var sp=$Visuals/AnimatedSprite
 
 func _ready():
 	Globals.actor=self
-	pass
 
 func update_dir():
 	dir.x = -Input.get_action_strength("ui_left")+Input.get_action_strength("ui_right")
@@ -19,10 +17,6 @@ func update_dir():
 
 func update_velos(delta):
 	velos=dir*speed
-
-func apply_velos(delta):
-	velos=move_and_slide(velos, Vector2.UP)
-	# print("apply velos")
 
 func _physics_process(delta):
 	update_dir()
