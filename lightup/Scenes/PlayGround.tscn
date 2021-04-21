@@ -29,7 +29,7 @@ position = Vector2( -11.7136, -205.93 )
 shape = SubResource( 1 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
-position = Vector2( -105.27, 45.986 )
+position = Vector2( -13.1659, 23.6274 )
 
 [node name="damage" type="Area2D" parent="."]
 position = Vector2( 138.408, -45.5082 )
