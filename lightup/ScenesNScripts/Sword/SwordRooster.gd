@@ -3,7 +3,8 @@ extends Node2D
 export var r=20
 export var ang=0.0
 export var rotating=false
-onready var sword_pos=preload("res://Scenes/SwordPos.tscn")
+export var ang_speed=PI
+onready var sword_pos=preload("res://ScenesNScripts/Sword/SwordPos/SwordPos.tscn")
 
 
 func setup(nr):
@@ -20,6 +21,4 @@ func setup(nr):
 
 func _physics_process(delta):
 	if rotating:
-		rotation+=PI/30
-	# rotation+=PI/10
-	pass
+		rotation+=ang_speed*delta

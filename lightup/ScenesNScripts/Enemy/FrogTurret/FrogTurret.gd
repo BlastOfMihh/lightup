@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends MBody
 
 
 # Declare member variables here. Examples:
@@ -10,6 +10,10 @@ extends KinematicBody2D
 func _ready():
 	pass # Replace with function body.
 
+func _physics_process(delta):
+
+	# rotation= -PI/4+(get_global_position()-get_global_mouse_position()).angle()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
