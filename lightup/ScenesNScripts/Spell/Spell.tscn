@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ScenesNScripts/Spell/States/Idle.gd" type="Script" id=1]
+[ext_resource path="res://ScenesNScripts/Spell/StateMachine.gd" type="Script" id=2]
+[ext_resource path="res://ScenesNScripts/Spell/Spell.gd" type="Script" id=3]
+[ext_resource path="res://godot_logo.png" type="Texture" id=4]
+[ext_resource path="res://ScenesNScripts/StateMachineShower.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ScenesNScripts/Spell/States/Casting.gd" type="Script" id=6]
+[ext_resource path="res://ScenesNScripts/Spell/States/Ready.gd" type="Script" id=7]
+
+[node name="Spell" type="Node2D"]
+position = Vector2( 30, 0 )
+script = ExtResource( 3 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource( 1 )
+active = true
+
+[node name="Casting" type="Node" parent="StateMachine"]
+script = ExtResource( 6 )
+
+[node name="Ready" type="Node" parent="StateMachine"]
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 0.497283
+scale = Vector2( 0.0525066, 0.439533 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+rotation = -0.744737
+scale = Vector2( 0.0525066, 0.439533 )
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" parent="." instance=ExtResource( 5 )]

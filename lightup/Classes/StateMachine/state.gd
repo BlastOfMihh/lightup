@@ -13,7 +13,7 @@ var conflicting_states=[]
 var removing_states=[]
 var necessary_states=[] # strings
 
-#
+#copy
 func _ready():
 	conflicting_states=[]
 	removing_states=[]

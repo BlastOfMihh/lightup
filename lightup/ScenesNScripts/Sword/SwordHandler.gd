@@ -16,7 +16,7 @@ func _ready():
 
 func toogle_rotate_after_cursor():
 	for x in get_children():
-		if !x.sm.active_states.has("FollowingRooster"):
+		if !x.sm.active_states.has("InRooster"):
 			x.sm.request_state("RotateAfterCursor")
 		else:
 			x.sm.deactivate("RotateAfterCursor")
@@ -26,13 +26,13 @@ func attack_range():
 		return
 	var cur=get_child(ind)
 	ind+=1
-	cur.sm.deactivate("FollowRooster")
+	cur.sm.deactivate("InRooster")
 	cur.sm.request_state("FollowCursor")
 
 func retreive():
 	for i in range(0,ind):
 		var cur=get_child(i)
-		cur.sm.request_state("FollowRooster")
+		cur.sm.request_state("InRooster")
 		cur.sm.deactivate("FollowCursor")
 	ind=0
 

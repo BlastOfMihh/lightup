@@ -1,14 +1,14 @@
-extends State
-#idle
+extends State #Idle
 
+#copy
 func _ready():
 	conflicting_states=[]
-	removing_states=["RotatingAttack"]
+	removing_states=["Casting", "Ready"]
 	necessary_states=[]
 
 func get_transition():
-	if Input.is_action_just_pressed("change_mode"):
-		return "RotatingAttack"
+	if pr.cspell.enter_casting():
+		return "Casting"
 	return null
 
 func enter_state(old_states):
@@ -18,6 +18,5 @@ func exit_state(new_states):
 	pass
 
 func _during_state(delta):
-	if Input.is_action_just_pressed("retreive"):
-		pr.sh.retreive()
 	pass
+#

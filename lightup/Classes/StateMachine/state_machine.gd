@@ -16,6 +16,7 @@ func _ready():
 			request_state(x.state_name)
 
 func _process(delta):
+	# yield(get_parent(), "ready")
 	for s in active_states:
 		var st=states[s]
 		var newst=st.get_transition()
@@ -51,8 +52,9 @@ func request_state(st:String)->bool:
 	for s in cur.removing_states:
 		if active_states.has(s):
 			deactivate(s)
-
-	# active_states.push_back(st)
 	activate(st)
 	return true
 
+#
+func is_active(st:String):
+	return active_states.has(st)

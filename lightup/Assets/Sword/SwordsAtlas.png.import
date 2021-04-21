@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/external-content.duckduckgo.com.png-066fc833eaf6f4e97e73990080dbdb89.stex"
+path="res://.import/SwordsAtlas.png-e83a8b89100180a2278e443a2c038fa1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/external-content.duckduckgo.com.png"
-dest_files=[ "res://.import/external-content.duckduckgo.com.png-066fc833eaf6f4e97e73990080dbdb89.stex" ]
+source_file="res://Assets/Sword/SwordsAtlas.png"
+dest_files=[ "res://.import/SwordsAtlas.png-e83a8b89100180a2278e443a2c038fa1.stex" ]
 
 [params]
 

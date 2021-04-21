@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SwordsAtlas.png-0ff4ca79c238f6326ced70f78da14337.stex"
+path="res://.import/sabie mare.png-536c9e70a93f5b293836107fab81e02c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SwordsAtlas.png"
-dest_files=[ "res://.import/SwordsAtlas.png-0ff4ca79c238f6326ced70f78da14337.stex" ]
+source_file="res://Assets/Sword/sabie mare.png"
+dest_files=[ "res://.import/sabie mare.png-536c9e70a93f5b293836107fab81e02c.stex" ]
 
 [params]
 
