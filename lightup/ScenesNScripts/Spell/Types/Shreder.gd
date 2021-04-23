@@ -34,6 +34,8 @@ func is_released()->bool:
 	return true
 
 func release():
-	Globals.actor.get_parent().add_child(self)
+	queue_free()
+	# get_tree().root.get_child(0).add_child(self)
+	# Globals.actor.get_parent().add_child(self)
 	print("release")
 	pass

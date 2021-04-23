@@ -179,6 +179,12 @@ script = ExtResource( 6 )
 [node name="Sword" parent="SwordHandler" instance=ExtResource( 5 )]
 position = Vector2( -30, -10 )
 
+[node name="Sword3" parent="SwordHandler" instance=ExtResource( 5 )]
+position = Vector2( -30, -10 )
+
+[node name="Sword2" parent="SwordHandler" instance=ExtResource( 5 )]
+position = Vector2( -30, -10 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/move_rooster1 = SubResource( 3 )
 anims/turn_red = SubResource( 4 )
