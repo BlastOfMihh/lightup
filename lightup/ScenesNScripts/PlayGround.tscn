@@ -45,4 +45,6 @@ position = Vector2( -52.1792, -0.85487 )
 
 [node name="RotatingLineTurret" parent="." instance=ExtResource( 4 )]
 position = Vector2( 13.3462, 2.48312 )
+number = 1
+starting_angle = 90
 [connection signal="body_entered" from="damage" to="damage" method="_on_Area2D_body_entered"]
