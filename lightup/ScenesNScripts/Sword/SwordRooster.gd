@@ -8,7 +8,8 @@ onready var sword_pos=preload("res://ScenesNScripts/Sword/SwordPos/SwordPos.tscn
 
 
 func setup(nr):
-
+	for x in get_children():
+		x.queue_free()
 	for i in range(0,nr):
 		var sp=sword_pos.instance()
 		add_child(sp)
