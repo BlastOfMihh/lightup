@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_0.png-8d9887bd41ad5f854081fefcddbd2ad6.stex"
+path="res://.import/sprite_0.png-3598d905de17be8d64fa33799cf18ec9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/frog/idle/sprite_0.png"
-dest_files=[ "res://.import/sprite_0.png-8d9887bd41ad5f854081fefcddbd2ad6.stex" ]
+source_file="res://Assets/logo/back/sprite_0.png"
+dest_files=[ "res://.import/sprite_0.png-3598d905de17be8d64fa33799cf18ec9.stex" ]
 
 [params]
 
