@@ -174,7 +174,6 @@ __meta__ = {
 
 [node name="SwordHandler" type="Node" parent="."]
 script = ExtResource( 6 )
-sword_count = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/move_rooster1 = SubResource( 3 )

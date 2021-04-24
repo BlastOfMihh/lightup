@@ -6,7 +6,8 @@ onready var sp=$VisualsTerraria/AnimatedSprite
 onready var cs_floater=$CSFloater
 onready var cs_shield=$CSShield
 
-var point2rooster
+var point2rooster=null
+var p2death=null
 
 export var speed=5
 
@@ -20,6 +21,10 @@ func look_at_mouse():
 func chase_rooster(delta):
 	if point2rooster:
 		velos=(point2rooster.global_position-position)*speed
+
+func chase_death(delta):
+	if p2death:
+		velos=(p2death-position)*speed
 
 func _physics_process(delta):
 	velos=move_and_slide(velos)

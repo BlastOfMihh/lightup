@@ -1,14 +1,14 @@
 extends State
-
+#ChaseThenDie
 
 func _ready():
 	conflicting_states=[]
-	removing_states=["ChaseThenDie"]
+	removing_states=["InRooster"]
 	necessary_states=[]
 
 func get_transition():
-	# if Input.is_key_pressed(KEY_TAB):
-	# 	return "exit"
+	if pr.position.distance_to(pr.p2death)<2:
+		return "exit"
 	return null
 
 func enter_state(old_states):
@@ -20,7 +20,9 @@ func enter_state(old_states):
 
 
 func exit_state(new_states):
-	pass
+	pr.queue_free()
+	pr.point2rooster.get_parent().queue_free()
 
 func _during_state(delta):
-	pr.chase_rooster(delta)
+	print(pr.position.distance_to(pr.p2death))
+	pr.chase_death(delta)

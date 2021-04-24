@@ -53,6 +53,11 @@ config/icon="res://Assets/Sword/SwordsAtlas.png"
 
 Globals="*res://globals.gd"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep_width"
+
 [input]
 
 attack_range={
