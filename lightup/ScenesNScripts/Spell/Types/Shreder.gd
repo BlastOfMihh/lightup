@@ -1,5 +1,6 @@
 extends Area2D
 
+onready var sp=$AnimatedSprite
 var timer=Timer.new()
 
 func _ready():
@@ -30,12 +31,15 @@ func is_ready()->bool:
 	return timer.time_left==0
 	return false
 
-func is_released()->bool:
+# func is_released()->bool:
+# 	return true
+
+func is_released():
 	return true
 
 func release():
-	queue_free()
-	# get_tree().root.get_child(0).add_child(self)
-	# Globals.actor.get_parent().add_child(self)
+	var newp=Globals.get_parent()
+	position=global_position
+	get_parent().remove_child(self)
+	newp.add_child(self)
 	print("release")
-	pass

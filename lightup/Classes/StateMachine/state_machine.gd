@@ -36,11 +36,11 @@ func deactivate(s:String):
 	cur.exit_state(active_states)
 
 func activate(s:String):
+	var cur=states[s]
+	cur.enter_state(active_states)
 	if !active_states.has(s):
 		active_states.push_back(s)
-	var cur=states[s]
 	cur.active=true
-	cur.enter_state(active_states)
 
 func request_state(st:String)->bool:
 	var cur=states[st]

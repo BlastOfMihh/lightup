@@ -16,6 +16,7 @@ func get_transition():
 
 func enter_state(old_states):
 	pr.cspell.start_casting()
+	pr.cspell.sp.play("cast")
 
 func exit_state(new_states):
 	pr.cspell.stop_casting()
