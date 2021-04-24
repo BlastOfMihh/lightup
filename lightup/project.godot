@@ -82,4 +82,5 @@ attack={
 [rendering]
 
 quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0.0431373, 0.00392157, 0.00392157, 1 )
 environment/default_environment="res://default_env.tres"
