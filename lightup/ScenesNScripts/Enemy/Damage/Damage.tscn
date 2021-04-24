@@ -4,5 +4,6 @@
 
 [node name="Damage" type="Sprite"]
 modulate = Color( 0.945098, 0.45098, 0.0196078, 1 )
-scale = Vector2( 0.0458573, 0.0593855 )
+rotation = 0.661197
+scale = Vector2( 0.107939, 0.139784 )
 texture = ExtResource( 1 )

@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://ScenesNScripts/Actor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Area2D.gd" type="Script" id=2]
 [ext_resource path="res://ScenesNScripts/tilebeta.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ScenesNScripts/Enemy/FrogTurret/FrogTurret.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 216.584, 10 )
@@ -16,7 +15,7 @@ extents = Vector2( 216.584, 10 )
 position = Vector2( 3, -2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( -2.778, -0.551193 )
+position = Vector2( -2.778, 1.45107 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -25,12 +24,13 @@ __meta__ = {
 position = Vector2( -3.7081, 116.541 )
 shape = SubResource( 1 )
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -292.003, -46.1613 )
+shape = SubResource( 1 )
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -11.7136, -205.93 )
 shape = SubResource( 1 )
-
-[node name="Actor" parent="." instance=ExtResource( 1 )]
-position = Vector2( -109.159, 35.733 )
 
 [node name="damage" type="Area2D" parent="."]
 position = Vector2( 138.408, -45.5082 )
@@ -43,6 +43,6 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
 shape = SubResource( 2 )
 
-[node name="FrogTurret" parent="." instance=ExtResource( 4 )]
-position = Vector2( -0.8134, 72.9553 )
+[node name="Actor" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52.3279, -3.97654 )
 [connection signal="body_entered" from="damage" to="damage" method="_on_Area2D_body_entered"]

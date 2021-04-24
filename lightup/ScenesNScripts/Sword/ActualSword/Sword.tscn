@@ -1,65 +1,76 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Assets/SwordsAtlas.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sword/SwordsAtlas.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Sword/ActualSword/Sword.gd" type="Script" id=2]
 [ext_resource path="res://ScenesNScripts/Sword/ActualSword/StateMachine.gd" type="Script" id=3]
-[ext_resource path="res://ScenesNScripts/Sword/States/FollowCursor.gd" type="Script" id=4]
-[ext_resource path="res://ScenesNScripts/Sword/States/FollowRooster.gd" type="Script" id=5]
-[ext_resource path="res://ScenesNScripts/Sword/States/Attack.gd" type="Script" id=6]
-[ext_resource path="res://ScenesNScripts/Sword/States/RotateAfterCursor.gd" type="Script" id=7]
-[ext_resource path="res://Assets/external-content.duckduckgo.com.png" type="Texture" id=8]
-[ext_resource path="res://Assets/sabie/sprite_0.png" type="Texture" id=9]
+[ext_resource path="res://ScenesNScripts/Sword/ActualSword/States/FollowCursor.gd" type="Script" id=4]
+[ext_resource path="res://ScenesNScripts/Sword/ActualSword/States/InRooster.gd" type="Script" id=5]
+[ext_resource path="res://ScenesNScripts/Sword/ActualSword/States/RotateAfterCursor.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Sword/sabie_terraria.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sword/sprite_0.png" type="Texture" id=9]
+[ext_resource path="res://ScenesNScripts/Sword/ActualSword/States/StaticShield.gd" type="Script" id=10]
+[ext_resource path="res://ScenesNScripts/StateMachineShower.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Sword/sabie mare.png" type="Texture" id=12]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "static_shield",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 64, 32, 32, 31 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 4.16376, 22.0744 )
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2.16675, 5.72533 )
 
 [node name="Sword" type="KinematicBody2D"]
 rotation = 0.00163405
-collision_layer = 0
-collision_mask = 2147483648
+collision_layer = 2147483649
+collision_mask = 2147483649
 script = ExtResource( 2 )
 
-[node name="Visuals" type="Node2D" parent="."]
-scale = Vector2( 1, -1 )
+[node name="VisualsTerraria" type="Node2D" parent="."]
+modulate = Color( 0.976471, 0.898039, 0.898039, 1 )
 
-[node name="Sprite3" type="Sprite" parent="Visuals"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="VisualsTerraria"]
+position = Vector2( 0.490642, -0.281464 )
+scale = Vector2( 1.01418, 0.95871 )
+frames = SubResource( 1 )
+
+[node name="Visuals2" type="Node2D" parent="VisualsTerraria"]
 visible = false
-texture = ExtResource( 9 )
+rotation = 1.82041e-10
+scale = Vector2( 1.279, -0.773 )
 
-[node name="Visuals3" type="Node2D" parent="."]
-scale = Vector2( 0.5, -0.5 )
-
-[node name="Sprite3" type="Sprite" parent="Visuals3"]
-texture = ExtResource( 8 )
-
-[node name="Visuals2" type="Node2D" parent="."]
-visible = false
-scale = Vector2( 1.279, 0.773 )
-
-[node name="Sprite" type="Sprite" parent="Visuals2"]
-visible = false
+[node name="Sprite" type="Sprite" parent="VisualsTerraria/Visuals2"]
 position = Vector2( -0.000257353, -0.15749 )
 rotation = 3.92102
-texture = SubResource( 1 )
+texture = SubResource( 2 )
 
-[node name="Sprite2" type="Sprite" parent="Visuals2"]
+[node name="Sprite2" type="Sprite" parent="VisualsTerraria/Visuals2"]
 visible = false
 scale = Vector2( 0.150382, 0.552581 )
-texture = SubResource( 1 )
+texture = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Visuals" type="Node2D" parent="VisualsTerraria"]
 visible = false
-rotation = -0.00434248
-shape = SubResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="VisualsTerraria/Visuals"]
+texture = ExtResource( 9 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 3 )
 
-[node name="FollowRooster" type="Node" parent="StateMachine"]
+[node name="InRooster" type="Node" parent="StateMachine"]
 script = ExtResource( 5 )
 active = true
 
@@ -70,8 +81,21 @@ script = ExtResource( 4 )
 
 [node name="Ready2Attack" type="Node" parent="StateMachine/FollowCursor"]
 
-[node name="Attack" type="Node" parent="StateMachine"]
-script = ExtResource( 6 )
-
 [node name="RotateAfterCursor" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
+
+[node name="StaticShield" type="Node" parent="StateMachine"]
+script = ExtResource( 10 )
+
+[node name="RichTextLabel" parent="." instance=ExtResource( 11 )]
+
+[node name="CSShield" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -11.3667, 1.59024, 10.3309, -11.4899, 8.29423, -1.6865, -8.31028, 8.00825 )
+disabled = true
+
+[node name="CSFloater" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.00163405, -0.999999 )
+rotation = -0.00434248
+shape = SubResource( 3 )

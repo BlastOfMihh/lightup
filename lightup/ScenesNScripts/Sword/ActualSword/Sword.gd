@@ -1,6 +1,10 @@
 extends MBody
 
 onready var sm=$StateMachine
+onready var sp=$VisualsTerraria/AnimatedSprite
+
+onready var cs_floater=$CSFloater
+onready var cs_shield=$CSShield
 
 var point2rooster
 
