@@ -12,8 +12,8 @@ func _ready():
 	Globals.actor=self
 
 func update_dir():
-	dir.x = -Input.get_action_strength("ui_left")+Input.get_action_strength("ui_right")
-	dir.y = Input.get_action_strength("ui_down")-Input.get_action_strength("ui_up")
+	dir.x = -Input.get_action_strength("move_left")+Input.get_action_strength("move_right")
+	dir.y = Input.get_action_strength("move_down")-Input.get_action_strength("move_up")
 
 func update_velos(delta):
 	velos=dir*speed
