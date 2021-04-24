@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/logo/sprite_0.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Assets/logo/back/sprite_1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/logo/back/sprite_0.png" type="Texture" id=6]
 [ext_resource path="res://Assets/logo/back/sprite_3.png" type="Texture" id=7]
+[ext_resource path="res://ScenesNScripts/menu/Quit.gd" type="Script" id=8]
+[ext_resource path="res://ScenesNScripts/menu/NewGame.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -43,14 +45,14 @@ texture = ExtResource( 1 )
 stretch_mode = 4
 
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
-margin_top = 300.0
+margin_top = 260.0
 margin_right = 862.0
 margin_bottom = 460.0
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
 margin_right = 862.0
-margin_bottom = 160.0
+margin_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -60,6 +62,7 @@ margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Play"
 flat = true
+script = ExtResource( 9 )
 
 [node name="sprite234" type="Sprite" parent="Menu/CenterRow/Buttons/NewGame"]
 position = Vector2( 433.334, 24.8628 )
@@ -68,6 +71,7 @@ z_index = -12
 texture = ExtResource( 3 )
 
 [node name="Tutorial" type="Button" parent="Menu/CenterRow/Buttons"]
+visible = false
 margin_top = 48.0
 margin_right = 862.0
 margin_bottom = 92.0
@@ -82,12 +86,13 @@ z_index = -12
 texture = ExtResource( 3 )
 
 [node name="Quit" type="Button" parent="Menu/CenterRow/Buttons"]
-margin_top = 96.0
+margin_top = 48.0
 margin_right = 862.0
-margin_bottom = 140.0
+margin_bottom = 92.0
 custom_fonts/font = SubResource( 1 )
 text = "Quit"
 flat = true
+script = ExtResource( 8 )
 
 [node name="sprite234" type="Sprite" parent="Menu/CenterRow/Buttons/Quit"]
 position = Vector2( 433.334, 24.8628 )
@@ -96,9 +101,12 @@ z_index = -12
 texture = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 514.033, 299.074 )
 scale = Vector2( 4.04688, 4.27778 )
 z_index = -99
 frames = SubResource( 2 )
 frame = 1
 playing = true
+[connection signal="pressed" from="Menu/CenterRow/Buttons/NewGame" to="Menu/CenterRow/Buttons/NewGame" method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons/Quit" to="Menu/CenterRow/Buttons/Quit" method="_on_Quit_pressed"]
