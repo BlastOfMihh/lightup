@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://godot_logo.png" type="Texture" id=1]
+[ext_resource path="res://Assets/godot_logo.png" type="Texture" id=1]
+
 
 [node name="Damage" type="Sprite"]
 modulate = Color( 0.945098, 0.45098, 0.0196078, 1 )

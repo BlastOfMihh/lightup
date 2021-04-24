@@ -1,14 +1,17 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://godot_logo.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Player/Player.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/Player/States/MoveMachine.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Player/States/Idle.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/Player/States/Walk.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/Player/RichTextLabel.gd" type="Script" id=6]
-[ext_resource path="res://Scripts/Player/States/Jump.gd" type="Script" id=7]
-[ext_resource path="res://Scripts/Player/States/Gravity.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/Player/States/MoveAndSlide.gd" type="Script" id=9]
+[ext_resource path="res://Assets/godot_logo.png" type="Texture" id=1]
+[ext_resource path="res://ZLegacyScripts/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://ZLegacyScripts/Player/States/MoveMachine.gd" type="Script" id=3]
+[ext_resource path="res://ZLegacyScripts/Player/States/Idle.gd" type="Script" id=4]
+[ext_resource path="res://ZLegacyScripts/Player/States/Walk.gd" type="Script" id=5]
+[ext_resource path="res://ZLegacyScripts/Player/RichTextLabel.gd" type="Script" id=6]
+[ext_resource path="res://ZLegacyScripts/Player/States/Jump.gd" type="Script" id=7]
+[ext_resource path="res://ZLegacyScripts/Player/States/Gravity.gd" type="Script" id=8]
+[ext_resource path="res://ZLegacyScripts/Player/States/MoveAndSlide.gd" type="Script" id=9]
+
+
+
 
 
 [sub_resource type="RectangleShape2D" id=1]

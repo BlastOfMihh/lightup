@@ -34,8 +34,8 @@ extents = Vector2( 2.16675, 5.72533 )
 
 [node name="Sword" type="KinematicBody2D"]
 rotation = 0.00163405
-collision_layer = 2147483649
-collision_mask = 2147483649
+collision_layer = 2147483648
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="VisualsTerraria" type="Node2D" parent="."]
