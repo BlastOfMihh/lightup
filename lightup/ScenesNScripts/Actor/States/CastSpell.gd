@@ -18,7 +18,6 @@ func enter_state(old_states):
 	spell = spell_instancer.instance()
 	pr.add_child(spell)
 	spell.setup("Shreder")
-	pass
 
 func exit_state(new_states):
 	if spell:

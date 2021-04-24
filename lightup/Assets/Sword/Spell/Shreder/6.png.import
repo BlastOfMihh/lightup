@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3.png-10b419757e0bf6739815bac3c3b8a56a.stex"
+path="res://.import/6.png-ed1b998ddf0c495220c6e4300e05624c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sword/Spell/shred/3.png"
-dest_files=[ "res://.import/3.png-10b419757e0bf6739815bac3c3b8a56a.stex" ]
+source_file="res://Assets/Sword/Spell/Shreder/6.png"
+dest_files=[ "res://.import/6.png-ed1b998ddf0c495220c6e4300e05624c.stex" ]
 
 [params]
 

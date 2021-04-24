@@ -7,7 +7,7 @@ var active_states=[]
 func _ready():
 	# yield(get_tree().root, "ready")
 	# yield(get_parent(), "ready")
-	yield(self, "ready")
+	# yield(self, "ready")
 	for x in get_children():
 		states[x.state_name]=x
 		x.pr=get_parent()
@@ -16,17 +16,18 @@ func _ready():
 			request_state(x.state_name)
 
 func _process(delta):
+	# print(active_states)
 	# yield(get_parent(), "ready")
 	for s in active_states:
-		var st=states[s]
-		var newst=st.get_transition()
+		var cur=states[s]
+		var newst=cur.get_transition()
 
-		if newst=="exit" or st.active==false:
+		if newst=="exit" :
 			deactivate(s)
 		elif newst!=null:
 			request_state(newst)
 		else :
-			st._during_state(delta)
+			cur._during_state(delta)
 	pass
 
 func deactivate(s:String):
@@ -35,11 +36,11 @@ func deactivate(s:String):
 	cur.active=false
 	cur.exit_state(active_states)
 
-func activate(s:String):
-	var cur=states[s]
+func activate(st:String):
+	var cur=states[st]
 	cur.enter_state(active_states)
-	if !active_states.has(s):
-		active_states.push_back(s)
+	if !active_states.has(st):
+		active_states.push_back(st)
 	cur.active=true
 
 func request_state(st:String)->bool:
