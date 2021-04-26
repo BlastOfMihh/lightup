@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_3.png-0119951262f3e50cfe2ce9293b44ffef.stex"
+path="res://.import/sprite_3.png-813227ae45e62e03338f906a7723b56f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/frog/atac/sprite_3.png"
-dest_files=[ "res://.import/sprite_3.png-0119951262f3e50cfe2ce9293b44ffef.stex" ]
+source_file="res://Assets/Enemies/Frog/atac/sprite_3.png"
+dest_files=[ "res://.import/sprite_3.png-813227ae45e62e03338f906a7723b56f.stex" ]
 
 [params]
 
