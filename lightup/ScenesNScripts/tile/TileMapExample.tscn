@@ -1,12 +1,12 @@
-[gd_resource type="TileSet" load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/Tile map/dungeon.piskel.v1.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 16, 32, 0, 32, -0.159122, 12.0724, 15.7223, 11.6687 )
+points = PoolVector2Array( 16, 32, 0, 32, -0.293705, 12.3416, 15.5877, 11.6687 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 16, 32, 0, 32, 0.0233612, 12.0724, 16.0057, 12.0575 )
+points = PoolVector2Array( 16, 32, 0, 32, -0.245819, 12.207, 15.9047, 11.9378 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -44,7 +44,7 @@ points = PoolVector2Array( 4.27696, 0.507347, 12.0158, 1.18029, 11.7915, 15.0877
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 4.69022, 10.749, 6.26041, 10.9733, 7.38199, 1.55213, 10.1859, 1.21566, 11.7561, 10.5247, 13.9992, 15.0109, 3.23218, 15.0109, 2.78357, 15.1231 )
 
-[resource]
+[sub_resource type="TileSet" id=15]
 0/name = "dungeon.piskel.v1.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -277,3 +277,11 @@ points = PoolVector2Array( 4.69022, 10.749, 6.26041, 10.9733, 7.38199, 1.55213, 
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
+
+[node name="TileMap" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 15 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 131073, 0, 0, 131074, 0, 1, 131075, 0, 1, 131076, 0, 1, 131077, 0, 2, 131087, 3, 0, 196609, 0, 65536, 196610, 0, 65537, 196611, 0, 65537, 196612, 0, 65537, 196613, 0, 65538, 196619, 1, 0, 196623, 3, 0, 196625, 2, 0, 196626, 2, 0, 196627, 2, 0, 262145, 0, 65536, 262146, 0, 65537, 262147, 0, 65537, 262148, 0, 65537, 262149, 0, 65538, 262155, 5, 1, 262159, 3, 0, 327681, 0, 65536, 327682, 0, 65537, 327683, 0, 65537, 327684, 0, 65537, 327685, 0, 65538, 327695, 3, 0, 393217, 0, 65536, 393218, 0, 65537, 393219, 0, 65537, 393220, 0, 65537, 393221, 0, 65538, 393225, 4, 0, 393230, 3, 0, 458753, 0, 65536, 458754, 0, 65537, 458755, 0, 65537, 458756, 0, 65537, 458757, 0, 65538, 458761, 4, 0, 458766, 3, 0, 524289, 0, 131072, 524290, 0, 131073, 524291, 0, 131073, 524292, 0, 131073, 524293, 0, 131074, 524297, 4, 0, 524302, 3, 0, 589833, 4, 0, 589838, 3, 0, 589839, 3, 0, 655366, 7, 3, 655369, 4, 0, 851973, 7, 1, 917512, 7, 0, 917513, 7, 0, 917514, 7, 0 )
