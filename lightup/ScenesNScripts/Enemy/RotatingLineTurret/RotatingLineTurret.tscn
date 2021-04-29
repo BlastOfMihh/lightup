@@ -24,5 +24,4 @@ script = ExtResource( 1 )
 rotation = 1.5708
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
