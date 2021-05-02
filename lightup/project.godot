@@ -117,7 +117,7 @@ move_down={
 
 [rendering]
 
-2d/snapping/use_gpu_pixel_snap=true
+quality/2d/use_pixel_snap=true
 environment/default_clear_color=Color( 0.996078, 0.741176, 0.662745, 1 )
 environment/default_environment="res://default_env.tres"
-quality/2d/use_pixel_snap=true
+2d/snapping/use_gpu_pixel_snap=true
