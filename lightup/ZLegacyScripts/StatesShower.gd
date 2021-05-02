@@ -1,7 +1,7 @@
 extends RichTextLabel
 
 onready var sm=get_parent().get_node("StateMachine")
-var active:=true
+export var active:=true
 
 func _process(delta):
 	if active:

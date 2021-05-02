@@ -40,5 +40,6 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
-position = Vector2( -20.1531, 56.3615 )
+position = Vector2( -26.4889, 69.3732 )
+
 [connection signal="body_entered" from="damage" to="damage" method="_on_Area2D_body_entered"]
