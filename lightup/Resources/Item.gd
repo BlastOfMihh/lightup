@@ -1,5 +1,5 @@
 extends Resource
-class_name SwordItem
+class_name Item
 
 export var name:String
 export var texture:Texture

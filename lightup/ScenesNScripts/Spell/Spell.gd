@@ -1,8 +1,8 @@
 extends Node2D
 
 
-onready var spells={"Shreder":preload("res://ScenesNScripts/Spell/Types/Shreder.tscn")}
-onready var type=preload("res://ScenesNScripts/Spell/Types/Shreder.tscn")
+onready var spells={"Shreder":preload("res://ScenesNScripts/Spell/Types/Shreder/Shreder.tscn")}
+onready var type=preload("res://ScenesNScripts/Spell/Types/Shreder/Shreder.tscn")
 
 export var spell_range=30
 

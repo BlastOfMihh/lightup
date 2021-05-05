@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://Resources/inventory.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Resources/Item.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "MBody",
 "language": "GDScript",
@@ -33,19 +43,15 @@ _global_script_classes=[ {
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://Classes/StateMachine/state_machine.gd"
-}, {
-"base": "Resource",
-"class": "SwordItem",
-"language": "GDScript",
-"path": "res://Resources/SwordItem.gd"
 } ]
 _global_script_class_icons={
+"Inventory": "",
+"Item": "",
 "MBody": "",
 "Rubber": "",
 "SpellType": "",
 "State": "",
-"StateMachine": "",
-"SwordItem": ""
+"StateMachine": ""
 }
 
 [application]
