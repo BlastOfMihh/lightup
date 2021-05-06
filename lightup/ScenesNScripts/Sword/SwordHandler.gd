@@ -1,6 +1,7 @@
 extends Node
 
 onready var	rooster = get_parent().get_node("SwordRooster")
+# onready var	rooster = get_parent().sr
 onready var sword_instancer = preload("res://ScenesNScripts/Sword/ActualSword/Sword.tscn")
 
 export var sword_count=3

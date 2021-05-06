@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ZLegacyScripts/Area2D.gd" type="Script" id=2]
-[ext_resource path="res://ScenesNScripts/UI/Inventory/InventoryContainer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Resources/inventory.tres" type="Resource" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 216.584, 10 )
@@ -40,17 +38,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
 shape = SubResource( 2 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="InventoryContainer" parent="CanvasLayer" instance=ExtResource( 3 )]
-inv = ExtResource( 5 )
-
-[node name="InventoryContainer2" parent="CanvasLayer" instance=ExtResource( 3 )]
-margin_left = 266.987
-margin_top = 1.06096e-05
-margin_right = 512.987
-inv = ExtResource( 5 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 24.1005, 74.1408 )

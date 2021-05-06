@@ -7,7 +7,8 @@ func _ready():
 	necessary_states=[]
 
 func get_transition():
-	if Input.is_action_just_pressed("change_mode"):
+	# if Input.is_action_just_pressed("change_mode"):
+	if Input.is_action_just_pressed("spell1"):
 		return "CastSpell"
 	return null
 

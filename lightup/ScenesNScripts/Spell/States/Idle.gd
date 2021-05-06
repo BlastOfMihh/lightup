@@ -14,8 +14,8 @@ func get_transition():
 func enter_state(old_states):
 	if pr.cspell==null:
 		pr.cspell=pr.type.instance()
-		pr.add_child(pr.cspell)
 		pr.cspell.position.x=pr.spell_range
+		pr.add_child(pr.cspell)
 	#animations
 	pr.cspell.sp.stop()
 	pr.cspell.sp.frame=0

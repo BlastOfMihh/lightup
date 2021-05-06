@@ -1,6 +1,7 @@
 extends State #CastSpell
 
 onready var spell_instancer=preload("res://ScenesNScripts/Spell/Spell.tscn")
+
 var spell=null
 
 func _ready():
@@ -14,10 +15,14 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
-	print("entered")
+	if Input.is_action_pressed("spell1"):
+		print("entered casting spells")
 	spell = spell_instancer.instance()
+	# spell.setup("Shreder")
+	spell.type= (pr.invs[0].inv.items[0].spells[0])
+
+		#.spells[0]
 	pr.add_child(spell)
-	spell.setup("Shreder")
 
 func exit_state(new_states):
 	if spell:

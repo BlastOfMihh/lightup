@@ -1,17 +1,16 @@
 extends Node2D
 
 
-onready var spells={"Shreder":preload("res://ScenesNScripts/Spell/Types/Shreder/Shreder.tscn")}
-onready var type=preload("res://ScenesNScripts/Spell/Types/Shreder/Shreder.tscn")
+# onready var spells={"Shreder":preload("res://ScenesNScripts/Spell/Types/Shreder/Shreder.tscn")}
+# onready var type=preload("res://ScenesNScripts/Spell/Types/Shreder/Shreder.tscn")
 
-export var spell_range=30
+export var spell_range=0
+export (PackedScene) var type
 
 var cspell=null
 
 func setup(which:String):
-	# cspell=spells[which].instance()
-	# add_child(cspell)
-	# type=spells[which]
+
 	pass
 
 func _physics_process(delta):

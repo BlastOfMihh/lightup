@@ -4,9 +4,11 @@ var dir=Vector2.ZERO
 var speed=200
 
 onready var sh=$SwordHandler
+onready var sr=$SwordRooster
 onready var sm=$StateMachine
 onready var ap=$AnimationPlayer
 onready var sp=$Visuals/AnimatedSprite
+onready var invs=[$UI/InventoryContainer, $UI/InventoryContainer2]
 
 func _ready():
 	Globals.actor=self
