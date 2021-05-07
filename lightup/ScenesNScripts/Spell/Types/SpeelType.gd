@@ -1,11 +1,5 @@
-extends Area2D
+extends Node2D
 class_name SpellType
 
-func enter_casting()->bool:
-	return false
-
-func is_casting()->bool:
-	return false
-
-func is_ready()->bool:
-	return false
+func enter_idle():
+	pass

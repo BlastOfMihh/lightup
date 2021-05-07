@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.gd" type="Script" id=1]
+
+[node name="Melee" type="Node2D"]
+script = ExtResource( 1 )
