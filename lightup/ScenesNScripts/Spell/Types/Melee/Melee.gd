@@ -29,6 +29,8 @@ func get_transition_casting():
 	return null
 
 export var dash_init_speed=300
+export var dash_friction=950
+export var playback_speed=6
 
 
 func enter_ready()->void:
@@ -36,9 +38,8 @@ func enter_ready()->void:
 	# print("hi0")
 	if dash:
 		dash.dash_vector=Vector2(cos(global_rotation), sin(global_rotation))*dash_init_speed
+		dash.friction=dash_friction
 		dash.enter_state([])
-		# dash.dash_vector=pr.get_local_mouse_position()
-		# dash.dash_vector=(get_global_mouse_position()-pr.global_position).normalized()*300
 	ap.play("attack")
 	ap.playback_speed=6
 	ap_finished=false

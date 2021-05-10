@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "DungeonCell",
+"language": "GDScript",
+"path": "res://ScenesNScripts/Dungeon/DungeonCell.gd"
+}, {
 "base": "Resource",
 "class": "Inventory",
 "language": "GDScript",
@@ -45,6 +50,7 @@ _global_script_classes=[ {
 "path": "res://Classes/StateMachine/state_machine.gd"
 } ]
 _global_script_class_icons={
+"DungeonCell": "",
 "Inventory": "",
 "Item": "",
 "MBody": "",
