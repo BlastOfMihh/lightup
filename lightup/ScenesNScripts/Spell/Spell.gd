@@ -6,8 +6,11 @@ extends Node2D
 
 # export var spell_range=0
 export (PackedScene) var type
-
 var cspell=null
+
+func die():
+	cspell.queue_free()
+	queue_free()
 
 
 # func setup(which:String):

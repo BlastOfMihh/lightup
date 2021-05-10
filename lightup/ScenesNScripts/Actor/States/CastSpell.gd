@@ -15,18 +15,16 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
-	if Input.is_action_pressed("spell1"):
-		print("entered casting spells")
+	var inv_nr = pr.get_spell_number()
+	# if Input.is_action_pressed("spell0"):
+	# 	inv_nr=0
 	spell = spell_instancer.instance()
-	# spell.setup("Shreder")
-	spell.type= (pr.invs[0].inv.items[0].spells[0])
-
-		#.spells[0]
+	spell.type= (pr.invs[inv_nr].inv.first_item().spells[0])
 	pr.add_child(spell)
 
 func exit_state(new_states):
 	if spell:
-		spell.queue_free()
+		spell.die()
 	pass
 
 func _during_state(delta):

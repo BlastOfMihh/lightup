@@ -14,6 +14,12 @@ func set_item(index, item):
 	emit_signal("items_changed", [index])
 	return prev_item
 
+func first_item():
+	for it in items:
+		if it:
+			return it
+	return null
+
 func swap_items(index, target_index):
 	var target_item=items[target_index]
 	var item=items[index]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://ScenesNScripts/Enemy/DeathRay/DeathRay.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ScenesNScripts/Enemies/DeathRay/DeathRay.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Enemies/sprite_0.png" type="Texture" id=2]
-[ext_resource path="res://ScenesNScripts/Enemy/FrogTurret/FrogTurret.gd" type="Script" id=3]
-[ext_resource path="res://ScenesNScripts/Enemy/Damage/Damage.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ScenesNScripts/Enemies/FrogTurret/FrogTurret.gd" type="Script" id=3]
+[ext_resource path="res://ScenesNScripts/Enemies/Damage/Damage.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 

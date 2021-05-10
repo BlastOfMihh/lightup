@@ -12,6 +12,9 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
+	print("srtupu")
+	pr.cspell=pr.type.instance()
+	Globals.actor.add_child(pr.cspell)
 	pass
 
 func exit_state(new_states):

@@ -8,7 +8,8 @@ func _ready():
 
 func get_transition():
 	# if Input.is_action_just_pressed("change_mode"):
-	if Input.is_action_just_pressed("spell1"):
+	# if Input.is_action_just_pressed("spell0"):
+	if pr.get_spell_number()>=0:
 		return "CastSpell"
 	return null
 

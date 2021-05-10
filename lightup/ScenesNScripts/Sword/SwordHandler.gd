@@ -1,7 +1,8 @@
 extends Node
 
-onready var	rooster = get_parent().get_node("SwordRooster")
-# onready var	rooster = get_parent().sr
+# onready var	rooster = get_parent().get_node("SwordRooster")
+onready var	rooster = $SwordRooster
+onready var pr=get_parent()
 onready var sword_instancer = preload("res://ScenesNScripts/Sword/ActualSword/Sword.tscn")
 
 export var sword_count=3
@@ -14,7 +15,7 @@ func add_sword():
 	add_child(swrd)
 	rooster.add_pos()
 	rooster.setup_angles()
-	swrd.setup(rooster.get_child(get_child_count()-1).point)
+	swrd.setup(rooster.get_child(swords.size()-1).point)
 	return swrd
 
 func _ready():
