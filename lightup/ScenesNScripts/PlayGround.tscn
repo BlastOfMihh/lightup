@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ZLegacyScripts/Area2D.gd" type="Script" id=2]
 [ext_resource path="res://ScenesNScripts/Dungeon/RandomDungeonGenerator.tscn" type="PackedScene" id=3]
 
@@ -45,9 +46,13 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="RandomDungeonGenerator" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -20.2165, 23.7841 )
 csz = Vector2( 128, 128 )
 space_between_cells = 32
+
+[node name="Actor" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1.5052, 27.4667 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 574.688, 346.048 )

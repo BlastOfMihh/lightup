@@ -7,7 +7,9 @@ export var playback_speed=6.0
 
 onready var pr=get_parent()
 onready var ap=$AnimationPlayer
+onready var sp=$SpellPos/KinematicBody2D/AnimatedSprite
 onready var spell_pos=$SpellPos
+onready var razor=$SpellPos/Razor
 var ap_finished=false
 
 func _ready():
@@ -28,13 +30,15 @@ func get_transition_idle():
 
 
 func enter_casting()->void:
+	razor.play_spin()
 	pass
 func exit_casting()->void:
 	pass
 func during_casting()->void:
+	pr.sm.request_state("Stand")
 	pass
 func get_transition_casting():
-	return "Ready"
+	# return "Ready"
 	return null
 
 

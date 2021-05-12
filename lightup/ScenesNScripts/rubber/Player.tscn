@@ -10,10 +10,6 @@
 [ext_resource path="res://ZLegacyScripts/Player/States/Gravity.gd" type="Script" id=8]
 [ext_resource path="res://ZLegacyScripts/Player/States/MoveAndSlide.gd" type="Script" id=9]
 
-
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31.5179, 32.2096 )
 
