@@ -52,7 +52,7 @@ csz = Vector2( 128, 128 )
 space_between_cells = 32
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1.5052, 27.4667 )
+position = Vector2( -20.2141, -90.5776 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 574.688, 346.048 )
