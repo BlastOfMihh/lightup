@@ -2,18 +2,17 @@
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ZLegacyScripts/Area2D.gd" type="Script" id=2]
-[ext_resource path="res://ScenesNScripts/Dungeon/RandomDungeonGenerator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ScenesNScripts/Spawn/SpawnEntity.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 216.584, 15.8919 )
+extents = Vector2( 216.584, 10 )
 
 [sub_resource type="CircleShape2D" id=2]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
-position = Vector2( 1182.12, 550.245 )
+position = Vector2( -2.778, 1.45107 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -24,10 +23,6 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -292.003, -46.1613 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 282.525, 73.6346 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
@@ -45,18 +40,9 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
 shape = SubResource( 2 )
 
-[node name="RandomDungeonGenerator" parent="." instance=ExtResource( 3 )]
-visible = false
-position = Vector2( -20.2165, 23.7841 )
-csz = Vector2( 128, 128 )
-space_between_cells = 32
+[node name="SpawnEntity" parent="." instance=ExtResource( 3 )]
+position = Vector2( 87.0006, 59.8855 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
-position = Vector2( -20.2141, -90.5776 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 574.688, 346.048 )
-current = true
-zoom = Vector2( 2, 2 )
-
+position = Vector2( -26.4889, 69.3732 )
 [connection signal="body_entered" from="damage" to="damage" method="_on_Area2D_body_entered"]

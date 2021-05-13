@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_6.png-4673c3545d8227d411c9b86a23f50ebd.stex"
+path="res://.import/sprite_6.png-7bf6065ea5f0e9553fbc30f62e46a906.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Actor/za sfera/sprite_6.png"
-dest_files=[ "res://.import/sprite_6.png-4673c3545d8227d411c9b86a23f50ebd.stex" ]
+source_file="res://Assets/za sfera/sprite_6.png"
+dest_files=[ "res://.import/sprite_6.png-7bf6065ea5f0e9553fbc30f62e46a906.stex" ]
 
 [params]
 
