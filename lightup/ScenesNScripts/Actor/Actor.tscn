@@ -25,11 +25,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "stand",
-"speed": 2.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "attack",
@@ -44,6 +39,11 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "stand",
+"speed": 2.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -171,6 +171,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+rotating = true
 
 [node name="SwordHandler" type="Node" parent="."]
 script = ExtResource( 6 )
