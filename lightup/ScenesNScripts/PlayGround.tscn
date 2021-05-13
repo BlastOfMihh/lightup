@@ -55,11 +55,14 @@ position = Vector2( 58.7329, -4.00452 )
 [node name="SpawnEntity3" parent="WaveController/Waves/Wave2" instance=ExtResource( 3 )]
 position = Vector2( 1.33484, -41.0463 )
 
+[node name="Doors" parent="WaveController" index="2"]
+position = Vector2( -0.950745, -5.68851 )
+
 [node name="Door" parent="WaveController/Doors" index="0" instance=ExtResource( 9 )]
-position = Vector2( -80.9507, 2.31149 )
+position = Vector2( -80, 8 )
 
 [node name="Door2" parent="WaveController/Doors" index="1" instance=ExtResource( 9 )]
-position = Vector2( 95.0493, 2.31149 )
+position = Vector2( 96, 8 )
 
 [connection signal="body_entered" from="damage" to="damage" method="_on_Area2D_body_entered"]
 
