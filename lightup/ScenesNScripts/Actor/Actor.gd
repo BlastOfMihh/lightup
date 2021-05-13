@@ -21,6 +21,8 @@ func update_velos(delta):
 	velos=dir*speed
 
 func _physics_process(delta):
+	if Input.is_key_pressed(KEY_EQUAL):
+		get_tree().reload_current_scene()
 	# if Input.is_key_pressed(KEY_T):
 	# 	sm.request_state("Dash")
 	update_dir()

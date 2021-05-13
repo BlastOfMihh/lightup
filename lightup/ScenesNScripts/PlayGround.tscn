@@ -1,13 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ZLegacyScripts/Area2D.gd" type="Script" id=2]
 [ext_resource path="res://ScenesNScripts/Spawn/SpawnEntity.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ScenesNScripts/Dungeon/Pieces/DungeonCenter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ScenesNScripts/Dungeon/Pieces/HallWayV.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ScenesNScripts/Dungeon/Pieces/Room.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ScenesNScripts/Waves/Wave/Wave.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ScenesNScripts/Waves/Controller/WaveController.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 
-[node name="Node2D" type="Node2D"]
+[node name="PlayGround" type="Node2D"]
 
 [node name="damage" type="Area2D" parent="."]
 position = Vector2( 361.438, -47.8893 )
@@ -25,6 +29,29 @@ shape = SubResource( 1 )
 [node name="Actor" parent="." instance=ExtResource( 1 )]
 position = Vector2( -26.4889, 69.3732 )
 
-[node name="SpawnEntity" parent="." instance=ExtResource( 3 )]
-position = Vector2( 54.2604, 57.306 )
+[node name="HallWayV" parent="." instance=ExtResource( 5 )]
+position = Vector2( -208.035, -0.099617 )
+rotation = 1.57079
+
+[node name="Room" parent="." instance=ExtResource( 6 )]
+position = Vector2( -464.174, -32.2174 )
+
+[node name="WaveController" parent="." instance=ExtResource( 8 )]
+position = Vector2( -383.049, -2.31149 )
+
+[node name="Wave3" parent="WaveController/Waves" index="0" instance=ExtResource( 7 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave3" instance=ExtResource( 3 )]
+position = Vector2( -58.3993, -6.6742 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave3" instance=ExtResource( 3 )]
+position = Vector2( 58.7329, -4.00452 )
+
+[node name="Wave2" parent="WaveController/Waves" index="1" instance=ExtResource( 7 )]
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave2" instance=ExtResource( 3 )]
+position = Vector2( 1.33484, -41.0463 )
+
 [connection signal="body_entered" from="damage" to="damage" method="_on_Area2D_body_entered"]
+
+[editable path="WaveController"]
