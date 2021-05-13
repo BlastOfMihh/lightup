@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.gd" type="Script" id=1]
+[ext_resource path="res://ScenesNScripts/HBoxes/HitBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Icons/feather_sword_icon.png" type="Texture" id=3]
+[ext_resource path="res://Assets/godot_logo.png" type="Texture" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 65.383
+height = 21.7941
+
+[sub_resource type="Animation" id=2]
+resource_name = "attack"
+step = 0.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpellPos/HitBox/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 7.8125e-05, 0.00226563, 0.998293 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[node name="Melee" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="SpellPos" type="Position2D" parent="."]
+position = Vector2( 35, 0 )
+__meta__ = {
+"_gizmo_extents_": 20.0
+}
+
+[node name="godot_logo" type="Sprite" parent="SpellPos"]
+visible = false
+position = Vector2( 0.0125542, -0.0438199 )
+scale = Vector2( 0.175504, -0.152438 )
+texture = ExtResource( 4 )
+
+[node name="HitBox" parent="SpellPos" instance=ExtResource( 2 )]
+scale = Vector2( 0.175504, -0.152438 )
+
+[node name="CollisionShape2D" parent="SpellPos/HitBox" index="0"]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/attack = SubResource( 2 )
+
+[node name="feather_sword_icon" type="Sprite" parent="."]
+position = Vector2( 34.8101, 0.290688 )
+texture = ExtResource( 3 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[editable path="SpellPos/HitBox"]

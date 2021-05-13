@@ -4,8 +4,6 @@ extends State
 var timer:Timer= Timer.new()
 
 
-
-
 func _ready():
 	conflicting_states=[]
 	removing_states=["Walk", "Stand"]

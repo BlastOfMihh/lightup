@@ -6,18 +6,13 @@ func _ready():
 	necessary_states=[]
 
 func get_transition():
-	if pr.cspell.is_released():
-		return "Idle"
-	return null
+	return pr.cspell.get_transition_ready()
 
-func enter_state(old_states):
-	pass
+func enter_state(_old_states):
+	pr.cspell.enter_ready()
 
 func exit_state(new_states):
-	pr.cspell.release()
-	pr.cspell = null
-	pass
+	pr.cspell.exit_ready()
 
 func _during_state(delta):
-	pass
-#
+	pr.cspell.during_ready()
