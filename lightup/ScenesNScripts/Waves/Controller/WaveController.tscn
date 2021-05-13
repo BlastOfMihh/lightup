@@ -18,6 +18,8 @@ shape = SubResource( 1 )
 
 [node name="Waves" type="Node2D" parent="."]
 
+[node name="Doors" type="Node2D" parent="."]
+
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 2 )
