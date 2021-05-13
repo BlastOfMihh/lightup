@@ -200,10 +200,10 @@ color = Color( 1, 1, 1, 0 )
 inv = ExtResource( 5 )
 
 [node name="InventoryContainer2" parent="UI" instance=ExtResource( 25 )]
-margin_left = 72.2901
-margin_top = 236.134
-margin_right = 318.29
-margin_bottom = 381.134
+margin_left = 73.234
+margin_top = 240.381
+margin_right = 319.234
+margin_bottom = 385.381
 color = Color( 0.537255, 0, 0, 0 )
 inv = ExtResource( 24 )
 
@@ -214,5 +214,11 @@ margin_right = 505.078
 margin_bottom = 381.413
 color = Color( 0.537255, 0, 0, 0 )
 inv = ExtResource( 27 )
+
+[node name="CenterContainer" parent="UI/InventoryContainer3" index="0"]
+margin_left = 0.561249
+margin_top = 3.92862
+margin_right = 0.561249
+margin_bottom = 38.9286
 
 [editable path="UI/InventoryContainer3"]
