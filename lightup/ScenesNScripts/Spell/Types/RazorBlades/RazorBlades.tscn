@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ScenesNScripts/Spell/Types/RazorBlades/RazorBlades.gd" type="Script" id=1]
+[ext_resource path="res://ScenesNScripts/Spell/Types/RazorBlades/Razor/Razor.tscn" type="PackedScene" id=2]
+
+[node name="RazorBlades" type="Node2D"]
+script = ExtResource( 1 )
+dash_init_speed = 120
+dash_friction = 1050
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="SpellPos" type="Position2D" parent="."]
+position = Vector2( 35, 0 )
+__meta__ = {
+"_gizmo_extents_": 20.0
+}
+
+[node name="Razor" parent="SpellPos" instance=ExtResource( 2 )]

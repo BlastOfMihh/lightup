@@ -54,7 +54,7 @@ func request_state(st:String)->bool:
 		if active_states.has(s):
 			deactivate(s)
 	activate(st)
-	return true
+	return cur
 
 #
 func is_active(st:String):

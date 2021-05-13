@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Item.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/feather_sword_icon.png" type="Texture" id=2]
+[ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ScenesNScripts/Spell/Types/RazorBlades/RazorBlades.tscn" type="PackedScene" id=4]
+
+[resource]
+script = ExtResource( 1 )
+name = "Feather Sword"
+texture = ExtResource( 2 )
+spells = [ ExtResource( 3 ), ExtResource( 4 ), null, null, null ]

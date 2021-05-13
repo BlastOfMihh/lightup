@@ -8,20 +8,13 @@ func _ready():
 	necessary_states=[]
 
 func get_transition():
-	if pr.cspell.is_ready():
-		return "Ready"
-	if !pr.cspell.is_casting():
-		return "Idle"
-	return null
+	return pr.cspell.get_transition_casting()
 
-func enter_state(old_states):
-	pr.cspell.start_casting()
-	pr.cspell.sp.play("cast")
+func enter_state(_old_states):
+	pr.cspell.enter_casting()
 
 func exit_state(new_states):
-	pr.cspell.stop_casting()
+	pr.cspell.exit_casting()
 
 func _during_state(delta):
-	pr.cspell.cast()
-	pass
-#
+	pr.cspell.during_casting()
