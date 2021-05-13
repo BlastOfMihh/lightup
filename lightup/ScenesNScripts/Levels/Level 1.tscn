@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/Enemies/RotatingLineTurret/RotatingLineTurret.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ScenesNScripts/tile/TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/godot_logo.png" type="Texture" id=4]
 
 [node name="Level 1" type="Node2D"]
 
@@ -30,3 +31,14 @@ starting_angle = 358
 [node name="RotatingLineTurret3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 296.177, 116.332 )
 number = 1
+
+[node name="godot_logo" type="Sprite" parent="."]
+position = Vector2( 296.079, 37.3688 )
+scale = Vector2( 0.0283536, 2.4019 )
+texture = ExtResource( 4 )
+
+[node name="godot_logo2" type="Sprite" parent="."]
+position = Vector2( 302.137, 35.5427 )
+rotation = -0.176932
+scale = Vector2( 0.0125903, 1.96988 )
+texture = ExtResource( 4 )
