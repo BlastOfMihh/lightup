@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://ScenesNScripts/Actor/States/NotCool.gd" type="Script" id=31]
 [ext_resource path="res://Assets/BuffIcons/npcs wrath.png" type="Texture" id=32]
 [ext_resource path="res://ScenesNScripts/Actor/UI.gd" type="Script" id=33]
+[ext_resource path="res://ScenesNScripts/pause/Pause.tscn" type="PackedScene" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -210,13 +211,13 @@ chase_length = 73
 anims/move_rooster1 = SubResource( 3 )
 anims/turn_red = SubResource( 4 )
 
-[node name="UI" type="Control" parent="."]
-script = ExtResource( 33 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="UI" parent="." instance=ExtResource( 34 )]
 
 [node name="InvsContainer" type="GridContainer" parent="UI"]
+margin_left = 18.7113
+margin_top = 3.68263
+margin_right = 86.7113
+margin_bottom = 183.683
 columns = 20
 __meta__ = {
 "_edit_use_anchors_": false
@@ -244,19 +245,27 @@ margin_left = 0.0
 margin_right = 20.0
 
 [node name="BuffDisplay" type="GridContainer" parent="UI"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 18.7113
+margin_top = 3.68263
+margin_right = 58.7113
+margin_bottom = 43.6826
 script = ExtResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AchievementDisplay" type="GridContainer" parent="UI"]
-margin_left = 49.4492
-margin_top = 56.8576
-margin_right = 89.4492
-margin_bottom = 96.8576
+margin_left = 68.1605
+margin_top = 60.5402
+margin_right = 108.161
+margin_bottom = 100.54
 columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI2" type="Control" parent="."]
+script = ExtResource( 33 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
