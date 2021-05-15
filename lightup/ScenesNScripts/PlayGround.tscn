@@ -10,7 +10,7 @@ extents = Vector2( 216.584, 15.8919 )
 
 [sub_resource type="CircleShape2D" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="PlayGround" type="Node2D"]
 
 [node name="Pause" parent="." instance=ExtResource( 4 )]
 
@@ -50,11 +50,6 @@ shape = SubResource( 2 )
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
 position = Vector2( -21.9484, -68.354 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 574.688, 346.048 )
-current = true
-zoom = Vector2( 2, 2 )
 
 [node name="BeardGuy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 28.8704, -23.3082 )

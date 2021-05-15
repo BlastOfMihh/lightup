@@ -22,8 +22,9 @@ func exit_state(new_states):
 
 func _during_state(delta):
 	for a in achs:
-		if a.condition():
+		if a.condition() and !sm.is_active(a.state_name):
 			sm.request_state(a.state_name)
+			print("ince")
 	pass
 #
 

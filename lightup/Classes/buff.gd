@@ -12,7 +12,7 @@ func condition()->bool:
 
 func _ready():
 	yield(get_parent(), "ready")
-	buff_display=pr.get_node("UI/BuffDisplay")
+	buff_display=pr.get_node(buff_display)
 	conflicting_states=[]
 	removing_states=[]
 	necessary_states=[]
