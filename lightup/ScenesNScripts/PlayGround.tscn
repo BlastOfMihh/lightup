@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ZLegacyScripts/Area2D.gd" type="Script" id=2]
 [ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/BeardGuy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ScenesNScripts/pause/Pause.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 216.584, 15.8919 )
@@ -10,6 +11,8 @@ extents = Vector2( 216.584, 15.8919 )
 [sub_resource type="CircleShape2D" id=2]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Pause" parent="." instance=ExtResource( 4 )]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 visible = false
