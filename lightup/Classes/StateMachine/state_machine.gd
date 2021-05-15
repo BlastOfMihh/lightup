@@ -4,13 +4,18 @@ class_name StateMachine
 var states={}
 var active_states=[]
 
+func add_state(x):
+	states[x.state_name]=x
+	x.pr=get_parent()
+
+
 func _ready():
 	# yield(get_tree().root, "ready")
 	# yield(get_parent(), "ready")
 	# yield(self, "ready")
+#func setup():
 	for x in get_children():
-		states[x.state_name]=x
-		x.pr=get_parent()
+		add_state(x)
 	for x in get_children():
 		if x.active:
 			request_state(x.state_name)
@@ -23,20 +28,20 @@ func _process(delta):
 		var newst=cur.get_transition()
 
 		if newst=="exit" :
-			deactivate(s)
+			_deactivate(s)
 		elif newst!=null:
 			request_state(newst)
 		else :
 			cur._during_state(delta)
 	pass
 
-func deactivate(s:String):
+func _deactivate(s:String):
 	active_states.erase(s)
 	var cur=states[s]
 	cur.active=false
 	cur.exit_state(active_states)
 
-func activate(st:String):
+func _activate(st:String):
 	var cur=states[st]
 	cur.enter_state(active_states)
 	if !active_states.has(st):
@@ -52,10 +57,13 @@ func request_state(st:String)->bool:
 
 	for s in cur.removing_states:
 		if active_states.has(s):
-			deactivate(s)
-	activate(st)
+			_deactivate(s)
+	_activate(st)
 	return cur
 
+func request_exit_state(st:String)->bool:
+	_deactivate(st)
+	return true
 #
 func is_active(st:String):
 	return active_states.has(st)

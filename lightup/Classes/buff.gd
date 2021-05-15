@@ -2,9 +2,13 @@ extends State
 class_name Buff
 
 export(Texture) var icon_image
-onready var buff_display
+export var buff_display="UI/BuffDisplay"
 
 var icon
+
+func condition()->bool:
+	return false
+
 
 func _ready():
 	yield(get_parent(), "ready")
@@ -17,7 +21,7 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
-	yield(get_parent(), "ready")
+	#yield(get_parent(), "ready")
 	icon=TextureRect.new()
 	icon.texture=icon_image
 	buff_display.add_child(icon)

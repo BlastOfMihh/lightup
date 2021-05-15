@@ -3,13 +3,22 @@ class_name MBody
 
 onready var sm=$StateMachine
 
+export var health:=100.0
+export var speed:=200.0
 
 var velos:=Vector2.ZERO
-var health:=100.0
-export var speed=200
-
 
 var velos_multiplier=100.0
+
+func add_buff(buff_name:String):
+	sm.request_state(buff_name)
+	# var buff=Globals.buffs[buff_name].instance()
+	# sm.add_child(buff)
+	# # buff.name=buff_name
+	# # yield(buff, "ready")
+	# sm.add_state(buff)
+	# sm.request_state(buff.name)
+
 
 func add_gravity():
 	velos.y+=Globals.gravity # it's 20
