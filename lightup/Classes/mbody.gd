@@ -9,7 +9,7 @@ var health:=100.0
 export var speed=200
 
 
-var velos_multiplier=180.0
+var velos_multiplier=100.0
 
 func add_gravity():
 	velos.y+=Globals.gravity # it's 20
