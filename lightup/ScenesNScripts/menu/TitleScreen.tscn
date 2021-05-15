@@ -23,8 +23,10 @@ animations = [ {
 } ]
 
 [node name="TitleScreen" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.998
+anchor_bottom = 2.0
+margin_right = 0.0239258
+rect_scale = Vector2( 0.48, 0.52 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -108,5 +110,6 @@ z_index = -99
 frames = SubResource( 2 )
 frame = 1
 playing = true
+
 [connection signal="pressed" from="Menu/CenterRow/Buttons/NewGame" to="Menu/CenterRow/Buttons/NewGame" method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/Buttons/Quit" to="Menu/CenterRow/Buttons/Quit" method="_on_Quit_pressed"]
