@@ -6,3 +6,4 @@ onready var sp=$Sprite
 
 func _ready():
 	sp.texture=sword.texture
+	
