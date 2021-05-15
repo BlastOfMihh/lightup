@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_3.png-6b2393422142641ad413b9b830993659.stex"
+path="res://.import/speed.png-2341fc930bfa73c4e9ce9de70d59e7ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BuffIcons/sprite_3.png"
-dest_files=[ "res://.import/sprite_3.png-6b2393422142641ad413b9b830993659.stex" ]
+source_file="res://Assets/Icons/BuffIcons/speed.png"
+dest_files=[ "res://.import/speed.png-2341fc930bfa73c4e9ce9de70d59e7ce.stex" ]
 
 [params]
 

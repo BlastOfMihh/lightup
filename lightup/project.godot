@@ -69,7 +69,8 @@ _global_script_class_icons={
 [application]
 
 config/name="lightbulb"
-run/main_scene="res://ScenesNScripts/PlayGround.tscn"
+run/main_scene="res://ScenesNScripts/Levels/Nivel1.tscn"
+boot_splash/image="res://Assets/Sword/sabie mare.png"
 boot_splash/bg_color=Color( 0.654902, 0.505882, 0.505882, 1 )
 config/icon="res://Assets/Sword/SwordsAtlas.png"
 

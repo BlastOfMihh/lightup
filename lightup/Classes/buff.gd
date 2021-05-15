@@ -2,7 +2,7 @@ extends State
 class_name Buff
 
 export(Texture) var icon_image
-export var buff_display="UI/BuffDisplay"
+export var buff_display="HUD/BuffDisplay"
 
 var icon
 

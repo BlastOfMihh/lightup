@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lant.png-22a6048f3a3e799b436acf0bbefa27bb.stex"
+path="res://.import/lant.png-6e5db53ab80466dd93cad34ea701845a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BuffIcons/lant.png"
-dest_files=[ "res://.import/lant.png-22a6048f3a3e799b436acf0bbefa27bb.stex" ]
+source_file="res://Assets/Icons/BuffIcons/lant.png"
+dest_files=[ "res://.import/lant.png-6e5db53ab80466dd93cad34ea701845a.stex" ]
 
 [params]
 
