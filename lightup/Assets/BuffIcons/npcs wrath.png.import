@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/npc,s rath.png-4613b9262d09703c6269fcdf05b4d6f7.stex"
+path="res://.import/npcs wrath.png-e8f7f4c5ded3430127f123719ef074be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BuffIcons/npc,s rath.png"
-dest_files=[ "res://.import/npc,s rath.png-4613b9262d09703c6269fcdf05b4d6f7.stex" ]
+source_file="res://Assets/BuffIcons/npcs wrath.png"
+dest_files=[ "res://.import/npcs wrath.png-e8f7f4c5ded3430127f123719ef074be.stex" ]
 
 [params]
 

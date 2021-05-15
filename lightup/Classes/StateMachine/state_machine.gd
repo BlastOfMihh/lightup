@@ -9,6 +9,7 @@ func add_state(x):
 	x.pr=get_parent()
 
 
+
 func _ready():
 	# yield(get_tree().root, "ready")
 	# yield(get_parent(), "ready")
