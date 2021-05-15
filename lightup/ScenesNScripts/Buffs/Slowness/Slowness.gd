@@ -12,7 +12,8 @@ func get_transition():
 	return null
 
 func enter_state2(old_states):
-	pr.velos_multiplier-=100
+	pr.velos_multiplier+=slow
+	
 	pass
 
 func exit_state2(new_states):
