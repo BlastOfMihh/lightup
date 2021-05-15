@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/singuru_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Icons/BuffIcons/snail.png" type="Texture" id=2]
+[ext_resource path="res://ScenesNScripts/Achievements/AchievementAnnoucement.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "enter"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 0.31864 ),
+"update": 0,
+"values": [ Vector2( 1.7, 1.7 ), Vector2( 1.5, 1.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 7.1, 7.8 ),
+"transitions": PoolRealArray( 1, 0.125 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="AchievementAnnoucement" type="CenterContainer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 214.264
+margin_top = 48.7217
+margin_right = 254.264
+margin_bottom = 88.7217
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -87.0
+margin_top = 48.7217
+margin_right = 87.0
+margin_bottom = 67.7217
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control/CenterContainer"]
+margin_right = 174.0
+margin_bottom = 19.0
+custom_fonts/font = ExtResource( 1 )
+text = "asdasdasdasdadsasdasdasdasd"
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -32.0
+margin_top = -24.0271
+margin_right = 32.0
+margin_bottom = 39.9729
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/enter = SubResource( 1 )

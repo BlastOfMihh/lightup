@@ -171,6 +171,7 @@ icon_image = ExtResource( 35 )
 script = ExtResource( 31 )
 icon_image = ExtResource( 32 )
 buff_display = "UI/AchievementDisplay"
+annouce = true
 
 [node name="Visuals" type="Node2D" parent="."]
 __meta__ = {

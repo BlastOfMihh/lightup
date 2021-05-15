@@ -9,6 +9,7 @@ onready var sr=$SwordRooster
 onready var ap=$AnimationPlayer
 onready var sp=$Visuals/AnimatedSprite
 onready var invs=get_node("UI/InvsContainer").get_children() #[$UI/InventoryContainer, $UI/InventoryContainer2]
+onready var hud=$HUD
 
 func _ready():
 	Globals.actor=self
