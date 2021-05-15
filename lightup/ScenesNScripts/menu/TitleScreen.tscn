@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/logo/sprite_0.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/logo/back/sprite_3.png" type="Texture" id=7]
 [ext_resource path="res://ScenesNScripts/menu/Quit.gd" type="Script" id=8]
 [ext_resource path="res://ScenesNScripts/menu/NewGame.gd" type="Script" id=9]
+[ext_resource path="res://ScenesNScripts/Levels/Nivel1.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -65,6 +66,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Play"
 flat = true
 script = ExtResource( 9 )
+doi = ExtResource( 10 )
 
 [node name="sprite234" type="Sprite" parent="Menu/CenterRow/Buttons/NewGame"]
 position = Vector2( 433.334, 24.8628 )
