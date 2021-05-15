@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/BeardGuy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ScenesNScripts/tile/TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/RAT.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ScenesNScripts/Waves/Wave/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ScenesNScripts/Waves/Controller/WaveController.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ScenesNScripts/Spawn/SpawnEntity.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ScenesNScripts/Waves/Wave/Wave.tscn" type="PackedScene" id=8]
 
 [node name="Nivel 3" type="Node2D"]
 
@@ -22,3 +27,82 @@ position = Vector2( 36.831, -17.304 )
 
 [node name="BeardGuy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 66.2997, -29.1729 )
+
+[node name="Rat" parent="." instance=ExtResource( 4 )]
+position = Vector2( -8, -24 )
+
+[node name="Rat2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 472, -272 )
+
+[node name="WaveController" parent="." instance=ExtResource( 6 )]
+
+[node name="CollisionShape2D" parent="WaveController/AreaRange" index="0"]
+position = Vector2( 346.444, 24.8974 )
+
+[node name="Wave" parent="WaveController/Waves" index="0" instance=ExtResource( 8 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 408, -56 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 216, -32 )
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 360, 24 )
+
+[node name="SpawnEntity4" parent="WaveController/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 320, 72 )
+
+[node name="Wave2" parent="WaveController/Waves" index="1" instance=ExtResource( 8 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 248, 24 )
+
+[node name="SpawnEntity6" parent="WaveController/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 248, 24 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 320, -40 )
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 320, 32 )
+
+[node name="SpawnEntity4" parent="WaveController/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 376, 64 )
+
+[node name="SpawnEntity5" parent="WaveController/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 264, 96 )
+
+[node name="Wave3" parent="WaveController/Waves" index="2" instance=ExtResource( 8 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave3" instance=ExtResource( 7 )]
+position = Vector2( 432, 56 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave3" instance=ExtResource( 7 )]
+position = Vector2( 408, 112 )
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave3" instance=ExtResource( 7 )]
+position = Vector2( 432, -32 )
+
+[node name="SpawnEntity4" parent="WaveController/Waves/Wave3" instance=ExtResource( 7 )]
+position = Vector2( 432, -32 )
+
+[node name="Wave4" parent="WaveController/Waves" index="3" instance=ExtResource( 8 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave4" instance=ExtResource( 7 )]
+position = Vector2( 336, 8 )
+
+[node name="Door" parent="WaveController/Doors" index="0" instance=ExtResource( 5 )]
+position = Vector2( 175.341, 74.6921 )
+
+[node name="Door2" parent="WaveController/Doors" index="1" instance=ExtResource( 5 )]
+position = Vector2( 475.169, -31.2542 )
+
+[node name="Door3" parent="WaveController/Doors" index="2" instance=ExtResource( 5 )]
+position = Vector2( 475.169, 47.6758 )
+
+[node name="Door4" parent="WaveController/Doors" index="3" instance=ExtResource( 5 )]
+position = Vector2( 408, 144 )
+rotation = 1.56486
+
+[editable path="WaveController"]
