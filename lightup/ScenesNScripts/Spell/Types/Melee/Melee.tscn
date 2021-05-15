@@ -2,7 +2,7 @@
 
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.gd" type="Script" id=1]
 [ext_resource path="res://ScenesNScripts/HBoxes/HitBox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Icons/feather_sword_icon.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Icons/sprite_2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Icons/BuffIcons/godot_logo.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -50,6 +50,7 @@ shape = SubResource( 1 )
 disabled = true
 
 [node name="feather_sword_icon" type="Sprite" parent="SpellPos"]
+rotation = 1.2596
 texture = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
