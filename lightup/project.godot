@@ -71,7 +71,7 @@ _global_script_class_icons={
 config/name="lightbulb"
 run/main_scene="res://ScenesNScripts/Levels/Nivel1.tscn"
 boot_splash/image="res://Assets/Sword/sabie mare.png"
-boot_splash/bg_color=Color( 0.654902, 0.505882, 0.505882, 1 )
+boot_splash/bg_color=Color( 0.00392157, 0.427451, 0.0705882, 1 )
 config/icon="res://Assets/Sword/SwordsAtlas.png"
 
 [autoload]
@@ -169,6 +169,6 @@ pause={
 [rendering]
 
 2d/snapping/use_gpu_pixel_snap=true
-environment/default_clear_color=Color( 0.996078, 0.741176, 0.662745, 1 )
+environment/default_clear_color=Color( 0.14902, 0.133333, 0.133333, 1 )
 environment/default_environment="res://default_env.tres"
 quality/2d/use_pixel_snap=true

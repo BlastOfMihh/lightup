@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
@@ -35,17 +35,13 @@
 [ext_resource path="res://ScenesNScripts/Actor/UI.gd" type="Script" id=33]
 [ext_resource path="res://ScenesNScripts/pause/Pause.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Assets/Icons/BuffIcons/confused.png" type="Texture" id=35]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=36]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "walk_down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "attack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
@@ -56,6 +52,11 @@ animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "attack",
 "speed": 5.0
 } ]
 
@@ -120,6 +121,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.211765, 0.211765, 1 ) ]
 }
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 36 )
 
 [node name="Actor" type="KinematicBody2D"]
 position = Vector2( 18.7113, 3.68263 )
@@ -246,11 +250,22 @@ inv = ExtResource( 27 )
 margin_left = 0.0
 margin_right = 20.0
 
+[node name="Button2" type="Button" parent="UI"]
+margin_left = 20.0
+margin_top = 190.0
+margin_right = 101.0
+margin_bottom = 210.0
+custom_fonts/font = SubResource( 5 )
+text = "Achievements"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AchievementDisplay" type="GridContainer" parent="UI"]
-margin_left = 19.8947
-margin_top = 203.901
-margin_right = 59.8952
-margin_bottom = 243.901
+margin_left = 21.156
+margin_top = 217.355
+margin_right = 61.1565
+margin_bottom = 257.355
 columns = 10
 __meta__ = {
 "_edit_use_anchors_": false
