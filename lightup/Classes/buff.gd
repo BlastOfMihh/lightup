@@ -21,9 +21,9 @@ func enter_state(old_states):
 	icon=TextureRect.new()
 	icon.texture=icon_image
 	buff_display.add_child(icon)
-	_enter_state(old_states)
+	enter_state2(old_states)
 
-func _enter_state(old_states):
+func enter_state2(old_states):
 	pass
 
 func exit_state(new_states):
