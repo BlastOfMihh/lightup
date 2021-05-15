@@ -1,10 +1,10 @@
 extends State
 class_name Buff
 
-export(Texture) var icon
+export(Texture) var icon_image
 onready var buff_display=$UI/BuffDisplay
 
-
+var icon
 
 func _ready():
 	conflicting_states=[]
@@ -15,6 +15,12 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
+	icon=TextureRect.new()
+	icon.texture=icon_image
+	buff_display.add_child(icon)
+	enter_state2(old_states)
+
+func enter_state2(old_states):
 	pass
 
 func exit_state(new_states):

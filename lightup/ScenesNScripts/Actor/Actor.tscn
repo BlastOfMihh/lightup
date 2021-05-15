@@ -152,6 +152,7 @@ script = ExtResource( 7 )
 script = ExtResource( 26 )
 
 [node name="Slowness" parent="StateMachine" instance=ExtResource( 29 )]
+active = true
 
 [node name="Visuals" type="Node2D" parent="."]
 __meta__ = {
