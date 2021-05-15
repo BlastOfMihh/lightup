@@ -173,6 +173,7 @@ frames = SubResource( 1 )
 animation = "stand"
 
 [node name="Sprite" type="Sprite" parent="Visuals"]
+visible = false
 position = Vector2( -0.355118, -11.1063 )
 rotation = 0.0627889
 scale = Vector2( -0.515502, 0.539518 )
