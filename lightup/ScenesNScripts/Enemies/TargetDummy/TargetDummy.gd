@@ -9,8 +9,13 @@ func get_hit():
 func die():
 	queue_free()
 
+
 func _physics_process(delta):
 	if Input.is_key_pressed(KEY_KP_0):
 		die()
 	kb=kb.move_toward(Vector2.ZERO, 900)
 	kb=move_and_slide(kb)
+
+
+func _on_HurtBox_area_entered(area):
+	die()

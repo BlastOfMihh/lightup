@@ -43,24 +43,24 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "stand",
-"speed": 2.0
-}, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "walk_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "stand",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -175,7 +175,7 @@ slow = -30
 
 [node name="Speed" parent="StateMachine" instance=ExtResource( 29 )]
 icon_image = ExtResource( 39 )
-slow = 150
+slow = 50
 
 [node name="Confused" parent="StateMachine" instance=ExtResource( 29 )]
 script = ExtResource( 40 )
