@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://ScenesNScripts/Enemies/RotatingLineTurret/RotatingLineTurret.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ScenesNScripts/tile/TileMap.tscn" type="PackedScene" id=3]
 
 [node name="Nivel 3" type="Node2D"]
@@ -19,14 +18,3 @@ tile_data = PoolIntArray( -1310693, 1, 0, -1310692, 1, 0, -1310691, 1, 0, -13106
 
 [node name="Actor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 36.831, -17.304 )
-
-[node name="RotatingLineTurret3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 429.455, -42.6887 )
-rot_speed = 30
-starting_angle = 13
-
-[node name="RotatingLineTurret2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 369.274, 59.8418 )
-number = 1
-rot_speed = 23
-starting_angle = 124
