@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
@@ -38,27 +38,29 @@
 [ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=36]
 [ext_resource path="res://ScenesNScripts/Actor/States/MightAswellBeASnail.gd" type="Script" id=37]
 [ext_resource path="res://Assets/Icons/BuffIcons/lant.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Icons/BuffIcons/speed.png" type="Texture" id=39]
+[ext_resource path="res://ScenesNScripts/Buffs/Slowness/Confused.gd" type="Script" id=40]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "stand",
-"speed": 2.0
-}, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "walk_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "stand",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -169,9 +171,16 @@ script = ExtResource( 30 )
 active = true
 
 [node name="Slowness" parent="StateMachine" instance=ExtResource( 29 )]
+slow = -30
+
+[node name="Speed" parent="StateMachine" instance=ExtResource( 29 )]
+icon_image = ExtResource( 39 )
+slow = 50
 
 [node name="Confused" parent="StateMachine" instance=ExtResource( 29 )]
+script = ExtResource( 40 )
 icon_image = ExtResource( 35 )
+slow = -30
 
 [node name="NotCool" type="Node" parent="StateMachine"]
 script = ExtResource( 31 )
@@ -182,6 +191,7 @@ annouce = true
 [node name="MightAswellBeASnail" type="Node" parent="StateMachine"]
 script = ExtResource( 37 )
 icon_image = ExtResource( 38 )
+buff_display = "UI/AchievementDisplay"
 annouce = true
 text = "move.."
 
