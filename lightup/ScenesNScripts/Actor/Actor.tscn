@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://ScenesNScripts/pause/Pause.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Assets/Icons/BuffIcons/confused.png" type="Texture" id=35]
 [ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=36]
+[ext_resource path="res://Assets/Actor/sprite_0.png" type="Texture" id=37]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -191,6 +192,11 @@ position = Vector2( -0.355118, -11.1063 )
 rotation = 0.0627889
 scale = Vector2( -0.515502, 0.539518 )
 texture = ExtResource( 23 )
+
+[node name="Sprite2" type="Sprite" parent="Visuals"]
+visible = false
+position = Vector2( -0.0323772, -8.98998 )
+texture = ExtResource( 37 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.0662193, 2.05271 )
