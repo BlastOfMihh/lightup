@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
@@ -29,6 +29,8 @@
 [ext_resource path="res://Resources/inv3.tres" type="Resource" id=27]
 [ext_resource path="res://ScenesNScripts/Actor/BuffDisplay.gd" type="Script" id=28]
 [ext_resource path="res://ScenesNScripts/Buffs/Slowness/Slowness.tscn" type="PackedScene" id=29]
+[ext_resource path="res://ScenesNScripts/Actor/States/Achieve.gd" type="Script" id=30]
+[ext_resource path="res://ScenesNScripts/Actor/States/NotCool.gd" type="Script" id=31]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -117,6 +119,7 @@ tracks/0/keys = {
 
 [node name="Actor" type="KinematicBody2D"]
 position = Vector2( 18.7113, 3.68263 )
+collision_mask = 14
 script = ExtResource( 2 )
 
 [node name="RichTextLabel" parent="." instance=ExtResource( 11 )]
@@ -151,9 +154,14 @@ script = ExtResource( 7 )
 [node name="Dash" type="Node" parent="StateMachine"]
 script = ExtResource( 26 )
 
-[node name="Slowness" parent="StateMachine" instance=ExtResource( 29 )]
+[node name="Achieve" type="Node" parent="StateMachine"]
+script = ExtResource( 30 )
 active = true
-slow = 0
+
+[node name="Slowness" parent="StateMachine" instance=ExtResource( 29 )]
+
+[node name="NotCool" type="Node" parent="StateMachine"]
+script = ExtResource( 31 )
 
 [node name="Visuals" type="Node2D" parent="."]
 __meta__ = {
@@ -232,6 +240,13 @@ margin_bottom = 38.9286
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AchievementDisplay" type="GridContainer" parent="UI"]
+margin_right = 40.0
+margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

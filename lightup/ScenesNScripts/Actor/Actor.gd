@@ -12,6 +12,7 @@ onready var invs=[$UI/InventoryContainer, $UI/InventoryContainer2]
 
 func _ready():
 	Globals.actor=self
+	#yield(self, "ready")
 
 func update_dir():
 	dir.x = -Input.get_action_strength("move_left")+Input.get_action_strength("move_right")
@@ -23,12 +24,12 @@ func update_velos(delta):
 	
 
 func _physics_process(delta):
-	# if Input.is_key_pressed(KEY_T):
-	# 	sm.request_state("Dash")
+	if Input.is_key_pressed(KEY_T):
+		sm.request_state("Slowness")
 	update_dir()
 	# update_velos(delta)
 	apply_velos(delta)
-
+ 
 func hurt():
 	sm.request_state("Stagger")
 	# print("hurrrrt")
