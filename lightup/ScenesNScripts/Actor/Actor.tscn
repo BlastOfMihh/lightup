@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
@@ -35,6 +35,8 @@
 [ext_resource path="res://ScenesNScripts/Actor/UI.gd" type="Script" id=33]
 [ext_resource path="res://ScenesNScripts/pause/Pause.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Assets/Icons/BuffIcons/confused.png" type="Texture" id=35]
+[ext_resource path="res://ScenesNScripts/Actor/States/MightAswellBeASnail.gd" type="Script" id=36]
+[ext_resource path="res://Assets/Icons/BuffIcons/speed.png" type="Texture" id=37]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -163,6 +165,11 @@ script = ExtResource( 30 )
 active = true
 
 [node name="Slowness" parent="StateMachine" instance=ExtResource( 29 )]
+slow = -30
+
+[node name="Speed" parent="StateMachine" instance=ExtResource( 29 )]
+icon_image = ExtResource( 37 )
+slow = 70
 
 [node name="Confused" parent="StateMachine" instance=ExtResource( 29 )]
 icon_image = ExtResource( 35 )
@@ -172,6 +179,11 @@ script = ExtResource( 31 )
 icon_image = ExtResource( 32 )
 buff_display = "UI/AchievementDisplay"
 annouce = true
+
+[node name="MightAswellBeASnail" type="Node" parent="StateMachine"]
+script = ExtResource( 36 )
+annouce = true
+text = "snail"
 
 [node name="Visuals" type="Node2D" parent="."]
 __meta__ = {

@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 2.1 ),
 "transitions": PoolRealArray( 1, 0.31864 ),
 "update": 0,
-"values": [ Vector2( 1.7, 1.7 ), Vector2( 1.5, 1.5 ) ]
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.45, 0.45 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
@@ -35,11 +35,11 @@ tracks/1/keys = {
 [node name="AchievementAnnoucement" type="CenterContainer"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = 214.264
-margin_top = 48.7217
-margin_right = 254.264
-margin_bottom = 88.7217
-rect_scale = Vector2( 2, 2 )
+margin_left = 456.264
+margin_top = 46.7217
+margin_right = 496.264
+margin_bottom = 86.7217
+rect_scale = Vector2( 1.7, 1.7 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true,
