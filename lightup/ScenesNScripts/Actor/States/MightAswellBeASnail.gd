@@ -1,11 +1,28 @@
 extends Buff
 
 
-var timer=Timer.new()
+onready var timer=$Timer
 
-func condition():
+var yes:=false
+
+func _on_Timer_timeout():
+	yes=true
+	pass # Replace with function body.
+
+
+func _ready():
 	pass
 
+func condition():
+	if !sm.is_active("Stand"):
+		timer.set_wait_time(timer.wait_time)
+		timer.start()
+		timer.paused=true
+	else: 
+		timer.paused=false
+	return yes
+
+	
 func enter_state2(old_states):
 	sm.request_state("Slowness")
 	pass

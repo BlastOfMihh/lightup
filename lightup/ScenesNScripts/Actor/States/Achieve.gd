@@ -1,12 +1,13 @@
 extends State
 
-onready var achs=[
-	get_parent().get_node("NotCool"),
-	get_parent().get_node("Slowness")
-]
+onready var achs=[]
 
 #
 func _ready():
+	for x in sm.get_children():
+		if x is Buff and x.annouce==true:
+			achs.push_back(x)
+			
 	conflicting_states=[]
 	removing_states=[]
 	necessary_states=[]
