@@ -3,7 +3,7 @@
 [ext_resource path="res://rubber.gd" type="Script" id=1]
 [ext_resource path="res://rubber2.gd" type="Script" id=2]
 [ext_resource path="res://ScenesNScripts/Legacy/KinematicBody2D.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/godot_logo.png" type="Texture" id=4]
+[ext_resource path="res://Assets/BuffIcons/godot_logo.png" type="Texture" id=4]
 [ext_resource path="res://ScenesNScripts/rubber/Player.tscn" type="PackedScene" id=5]
 
 
