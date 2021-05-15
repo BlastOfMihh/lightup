@@ -1,0 +1,97 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Assets/solid color/sprite_0.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ScenesNScripts/menu/Quit.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Icons/BuffIcons/godot_logo.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Actor/atac frontal/sprite_2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Actor/atac frontal/sprite_3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Actor/atac frontal/sprite_1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Actor/atac frontal/sprite_0.png" type="Texture" id=8]
+[ext_resource path="res://Assets/NPCs/BeardGuy/sprite_0.png" type="Texture" id=9]
+[ext_resource path="res://Assets/NPCs/BeardGuy/sprite_1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/NPCs/Rat/sprite_1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/NPCs/Rat/sprite_0.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="win" type="Button" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 69.2756
+margin_bottom = 113.276
+custom_fonts/font = SubResource( 1 )
+text = "Congratulations ! You WON!"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 84.0533, 152.834 )
+rotation = -0.199907
+scale = Vector2( 4.708, 5 )
+frames = SubResource( 2 )
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 448.911, 153.622 )
+rotation = 0.252288
+scale = Vector2( 1.25, 1.25 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 264.966, 110.124 )
+rotation = 0.0659197
+scale = Vector2( 5, 5 )
+frames = SubResource( 4 )
+frame = 2
+playing = true
+
+[node name="godot_logo" type="Sprite" parent="."]
+position = Vector2( 460.072, 44.805 )
+rotation = -0.199907
+scale = Vector2( 0.587037, 0.623446 )
+texture = ExtResource( 4 )
+
+[connection signal="pressed" from="win" to="win" method="_on_Quit_pressed"]
