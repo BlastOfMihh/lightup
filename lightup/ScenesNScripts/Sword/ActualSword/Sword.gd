@@ -1,6 +1,5 @@
 extends MBody
-
-onready var sm=$StateMachine
+ 
 onready var sp=$VisualsTerraria/AnimatedSprite
 
 onready var cs_floater=$CSFloater
@@ -9,7 +8,8 @@ onready var cs_shield=$CSShield
 var point2rooster=null
 var p2death=null
 
-export var speed=5
+func _ready(): 
+	speed=5
 
 func setup(point:Position2D):
 	point2rooster=point

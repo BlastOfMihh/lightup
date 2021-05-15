@@ -25,3 +25,14 @@ func _during_state(delta):
 	if pr.dir.x:
 		pr.sp.get_parent().scale.x=-pr.dir.x
 	pr.update_velos(delta)
+
+
+
+
+
+
+
+
+
+
+

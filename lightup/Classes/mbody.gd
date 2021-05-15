@@ -1,7 +1,15 @@
 extends KinematicBody2D
 class_name MBody
 
+onready var sm=$StateMachine
+
+
 var velos:=Vector2.ZERO
+var health:=100.0
+export var speed=200
+
+
+var velos_multiplier=180.0
 
 func add_gravity():
 	velos.y+=Globals.gravity # it's 20

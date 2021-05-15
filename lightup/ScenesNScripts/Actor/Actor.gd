@@ -1,15 +1,11 @@
-
-
-
-
 extends MBody
 
 var dir=Vector2.ZERO
-var speed=200
+
 
 onready var sh=$SwordHandler
 onready var sr=$SwordRooster
-onready var sm=$StateMachine
+
 onready var ap=$AnimationPlayer
 onready var sp=$Visuals/AnimatedSprite
 onready var invs=[$UI/InventoryContainer, $UI/InventoryContainer2]
@@ -23,6 +19,8 @@ func update_dir():
 
 func update_velos(delta):
 	velos=dir*speed
+	velos*=velos_multiplier/100.0
+	
 
 func _physics_process(delta):
 	# if Input.is_key_pressed(KEY_T):
