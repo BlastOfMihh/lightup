@@ -1,6 +1,6 @@
 extends MBody
 
-var dray_instancer=preload("res://ScenesNScripts/Enemy/DeathRay/DeathRay.tscn")
+var dray_instancer=preload("res://ScenesNScripts/Enemies/DeathRay/DeathRay.tscn")
 var angle
 
 export var number=3
