@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ZLegacyScripts/Area2D.gd" type="Script" id=2]
+[ext_resource path="res://ScenesNScripts/NPCs/Bearded guy/KinematicBody2D.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 216.584, 15.8919 )
@@ -51,5 +52,8 @@ position = Vector2( -22.1984, -68.354 )
 position = Vector2( 574.688, 346.048 )
 current = true
 zoom = Vector2( 2, 2 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11.4536, -54.3997 )
 
 [connection signal="body_entered" from="damage" to="damage" method="_on_Area2D_body_entered"]
