@@ -8,7 +8,7 @@ func get_hit():
 
 func die():
 	queue_free()
-
+	
 
 func _physics_process(delta):
 	if Input.is_key_pressed(KEY_KP_0):
@@ -18,4 +18,5 @@ func _physics_process(delta):
 
 
 func _on_HurtBox_area_entered(area):
-	die()
+	if area.name=="HitBox":
+		die()
