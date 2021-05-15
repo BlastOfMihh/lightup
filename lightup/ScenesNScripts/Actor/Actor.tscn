@@ -217,8 +217,6 @@ __meta__ = {
 }
 
 [node name="InvsContainer" type="GridContainer" parent="UI"]
-margin_right = 40.0
-margin_bottom = 40.0
 columns = 20
 __meta__ = {
 "_edit_use_anchors_": false
