@@ -16,7 +16,7 @@ tile_data = PoolIntArray( -131086, 2, 0, -131085, 2, 0, -131084, 2, 0, -131083, 
 position = Vector2( -209.64, 82.2285 )
 
 [node name="TargetDummy" parent="." instance=ExtResource( 3 )]
-position = Vector2( -138.106, 84.6579 )
+position = Vector2( -103.629, 137.214 )
 
 [node name="TargetDummy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -60.2355, 122.925 )

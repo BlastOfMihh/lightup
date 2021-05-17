@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/BeardGuy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/tile/TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ScenesNScripts/Sword/Pickable/PickableSword.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/RAT.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ScenesNScripts/Enemies/Projectile/Projectile.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ScenesNScripts/Dungeon/Pieces/LevelChanger.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ScenesNScripts/Levels/Nivel3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ScenesNScripts/Enemies/Archer/Archer.tscn" type="PackedScene" id=9]
 
 [node name="Level 1" type="Node2D"]
+position = Vector2( 19.8526, -1.87289 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -27,7 +30,7 @@ tile_data = PoolIntArray( -196609, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 
 position = Vector2( 68.8325, 52.4703 )
 
 [node name="Actor" parent="." instance=ExtResource( 3 )]
-position = Vector2( 15.7923, 15.6502 )
+position = Vector2( 16.3869, 15.6502 )
 z_index = 4096
 
 [node name="rat" parent="." instance=ExtResource( 5 )]
@@ -41,4 +44,10 @@ next_level = ExtResource( 8 )
 position = Vector2( 93.5556, -7.20226 )
 
 [node name="PickableSwords" parent="." instance=ExtResource( 4 )]
-position = Vector2( 184.698, 27.5999 )
+position = Vector2( 16.4456, 16.4157 )
+
+[node name="Projectile" parent="." instance=ExtResource( 6 )]
+position = Vector2( 290.109, 23.1246 )
+
+[node name="Archer" parent="." instance=ExtResource( 9 )]
+position = Vector2( 171.556, 20.2271 )

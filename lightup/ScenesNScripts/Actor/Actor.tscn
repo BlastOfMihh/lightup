@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
@@ -40,17 +40,18 @@
 [ext_resource path="res://Assets/Icons/BuffIcons/lant.png" type="Texture" id=38]
 [ext_resource path="res://Assets/Icons/BuffIcons/speed.png" type="Texture" id=39]
 [ext_resource path="res://ScenesNScripts/Buffs/Slowness/Confused.gd" type="Script" id=40]
+[ext_resource path="res://ScenesNScripts/Actor/HealthDisplay.tscn" type="PackedScene" id=41]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "walk_down",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk_down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
@@ -226,6 +227,7 @@ current = true
 
 [node name="SwordHandler" type="Node" parent="."]
 script = ExtResource( 6 )
+sword_count = 0
 
 [node name="SwordRooster" type="Node2D" parent="SwordHandler"]
 position = Vector2( -64.139, -27.7417 )
@@ -242,6 +244,7 @@ anims/move_rooster1 = SubResource( 3 )
 anims/turn_red = SubResource( 4 )
 
 [node name="UI" parent="." instance=ExtResource( 34 )]
+visible = false
 
 [node name="InvsContainer" type="GridContainer" parent="UI"]
 margin_left = 18.7113
@@ -302,12 +305,21 @@ __meta__ = {
 }
 
 [node name="BuffDisplay" type="GridContainer" parent="HUD"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 17.3406
+margin_top = 52.9144
+margin_right = 57.3406
+margin_bottom = 92.9144
 script = ExtResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HealthDisplay" parent="HUD" instance=ExtResource( 41 )]
+margin_left = 17.0
+margin_top = 26.0
+margin_right = 137.0
+margin_bottom = 41.0
+color = Color( 0.615686, 0.0352941, 0.0352941, 1 )
 
 [connection signal="timeout" from="StateMachine/MightAswellBeASnail/Timer" to="StateMachine/MightAswellBeASnail" method="_on_Timer_timeout"]
 
