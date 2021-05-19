@@ -64,7 +64,7 @@ func during_ready()->void:
 	pass
 func get_transition_ready():
 	if ap_finished:
-		return "Idle"
+		return "Finished"
 	return null
 
 

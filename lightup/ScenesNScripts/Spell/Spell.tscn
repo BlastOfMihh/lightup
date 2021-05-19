@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ScenesNScripts/Spell/States/Idle.gd" type="Script" id=1]
 [ext_resource path="res://ScenesNScripts/Spell/StateMachine.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://ScenesNScripts/Spell/States/Casting.gd" type="Script" id=6]
 [ext_resource path="res://ScenesNScripts/Spell/States/Ready.gd" type="Script" id=7]
 [ext_resource path="res://ScenesNScripts/Spell/States/Setup.gd" type="Script" id=8]
+[ext_resource path="res://ScenesNScripts/Spell/States/Fisnished.gd" type="Script" id=9]
 
 [node name="Spell" type="Node2D"]
 script = ExtResource( 3 )
@@ -27,6 +28,9 @@ script = ExtResource( 6 )
 
 [node name="Ready" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
+
+[node name="Finished" type="Node" parent="StateMachine"]
+script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.968805, 0.573943 )

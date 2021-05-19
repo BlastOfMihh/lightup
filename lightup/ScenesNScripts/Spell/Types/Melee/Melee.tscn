@@ -50,7 +50,7 @@ shape = SubResource( 1 )
 disabled = true
 
 [node name="feather_sword_icon" type="Sprite" parent="SpellPos"]
-rotation = 1.2596
+rotation = 2.43332
 texture = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -48,3 +48,5 @@ position = Vector2( 196.307, 34.4134 )
 [node name="Archer" parent="." instance=ExtResource( 9 )]
 position = Vector2( 301.693, 22.472 )
 damage = 101
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]

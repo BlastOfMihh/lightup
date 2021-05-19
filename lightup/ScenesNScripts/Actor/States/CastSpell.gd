@@ -10,8 +10,11 @@ func _ready():
 	necessary_states=[]
 
 func get_transition():
-	if Input.is_action_just_pressed("change_mode"):
-		return "Idle"
+	if spell:
+		if spell.sm.is_active("Finished"):
+			return "Idle"
+#	if Input.is_action_just_pressed("change_mode"):
+#		return "Idle"
 	return null
 
 func enter_state(old_states):
