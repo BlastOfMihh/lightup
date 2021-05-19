@@ -56,3 +56,4 @@ fire_time = 1
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 
 [editable path="Archer"]
+[editable path="Archer/HurtBox"]

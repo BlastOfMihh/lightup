@@ -288,11 +288,15 @@ __meta__ = {
 [node name="peretipodea" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
 cell_size = Vector2( 16, 16 )
+collision_layer = 2
+collision_mask = 0
 format = 1
 
 [node name="detalii" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
 cell_size = Vector2( 16, 16 )
+collision_layer = 2
+collision_mask = 0
 format = 1
 __meta__ = {
 "_editor_description_": ""
