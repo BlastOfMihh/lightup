@@ -6,6 +6,9 @@ extends Node2D
 
 # export var spell_range=0
 export (PackedScene) var type
+
+onready var sm=$StateMachine 
+
 var cspell=null
 
 func die():
