@@ -11,4 +11,6 @@ func _ready():
 
 func _on_PickableSwords_body_entered(body):
 	queue_free()
-	Globals.actor.invs[0].inv.add_item(sword)
+#	Globals.actor.invs[0].inv.add_item(sword)
+	for ic in Globals.actor.invs:
+		ic.inv.add_item(sword)

@@ -14,14 +14,21 @@ func set_item(index, item):
 	emit_signal("items_changed", [index])
 	return prev_item
 
-func add_item(item):
+func add_item(item)->void:
 	var idx=0
+#	for i in items:
+#		if i and i.name==item.name:
+#			item.count+=1
+#			set_item(idx,item)
+#			return
+#		idx+=1
+#	idx=0
 	for i in items:
 		if i==null:
 			set_item(idx,item)
 			break
 		idx+=1
-	Globals.actor.add_child(item.passive.instance())
+#	Globals.actor.add_child(item.passive.instance())
 
 func first_item():
 	for it in items:
