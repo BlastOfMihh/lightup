@@ -18,11 +18,9 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
-	var inv_nr = pr.get_spell_number()
-	# if Input.is_action_pressed("spell0"):
-	# 	inv_nr=0
+	var spell_nr = pr.get_spell_number()
 	spell = spell_instancer.instance()
-	spell.type= (pr.invs[inv_nr].inv.first_item().spells[inv_nr])
+	spell.type= (pr.invs[spell_nr].inv.first_item().spells[spell_nr])
 	pr.add_child(spell)
 
 func exit_state(new_states):
