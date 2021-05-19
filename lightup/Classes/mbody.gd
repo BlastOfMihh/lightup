@@ -32,3 +32,7 @@ func add_velocity(add:Vector2):
 
 func apply_velos(delta):
 	velos=move_and_slide(velos, Vector2.UP)
+	
+func die():
+	print(name+"->dead")
+	pass

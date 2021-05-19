@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.gd" type="Script" id=1]
 [ext_resource path="res://ScenesNScripts/HBoxes/HitBox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Icons/sprite_2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Icons/BuffIcons/godot_logo.png" type="Texture" id=4]
+[ext_resource path="res://ScenesNScripts/Spell/Types/Melee/HitBox.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 65.383
@@ -27,7 +28,6 @@ tracks/0/keys = {
 
 [node name="Melee" type="Node2D"]
 script = ExtResource( 1 )
-spell_range = 24
 
 [node name="SpellPos" type="Position2D" parent="."]
 position = Vector2( 15, 0 )
@@ -44,6 +44,7 @@ texture = ExtResource( 4 )
 [node name="HitBox" parent="SpellPos" instance=ExtResource( 2 )]
 scale = Vector2( 0.175504, -0.152438 )
 collision_mask = 12
+script = ExtResource( 5 )
 
 [node name="CollisionShape2D" parent="SpellPos/HitBox" index="0"]
 shape = SubResource( 1 )
