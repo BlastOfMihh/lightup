@@ -25,11 +25,11 @@ extents = Vector2( 202.252, 132.514 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 168.807, 73.898 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 155.801, 89.0945 )
-
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 106.446, 69.0007 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 171.436, 94.2533 )
 
 [node name="Lvl1" type="Node2D"]
 
@@ -214,31 +214,6 @@ rotation = -1.57079
 position = Vector2( -87.0314, 87.3844 )
 rotation = -1.57079
 
-[node name="WaveController7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 207.015, 650.356 )
-
-[node name="CollisionShape2D" parent="WaveController7/AreaRange" index="0"]
-position = Vector2( -12.2295, 14.1422 )
-shape = SubResource( 7 )
-
-[node name="WaveController" parent="WaveController7/Waves" index="0" instance=ExtResource( 4 )]
-
-[node name="SpawnEntity" parent="WaveController7/Waves/WaveController" instance=ExtResource( 6 )]
-position = Vector2( 60.8112, -24 )
-
-[node name="SpawnEntity2" parent="WaveController7/Waves/WaveController" instance=ExtResource( 6 )]
-position = Vector2( -61.7739, 32 )
-
-[node name="SpawnEntity3" parent="WaveController7/Waves/WaveController" instance=ExtResource( 6 )]
-position = Vector2( 60.8112, 46.8492 )
-
-[node name="Door" parent="WaveController7/Doors" index="0" instance=ExtResource( 3 )]
-position = Vector2( 172.163, -32 )
-
-[node name="Door2" parent="WaveController7/Doors" index="1" instance=ExtResource( 3 )]
-position = Vector2( -125.023, -104.116 )
-rotation = -1.57079
-
 [node name="WaveController8" parent="." instance=ExtResource( 4 )]
 position = Vector2( -607.282, -74.3174 )
 
@@ -257,6 +232,33 @@ position = Vector2( 32, -11.3137 )
 position = Vector2( -0.297302, 105.431 )
 rotation = 1.57079
 
+[node name="WaveController7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 183.015, 663.224 )
+
+[node name="CollisionShape2D" parent="WaveController7/AreaRange" index="0"]
+position = Vector2( 11.7703, 0 )
+shape = SubResource( 9 )
+
+[node name="Wave" parent="WaveController7/Waves" index="0" instance=ExtResource( 5 )]
+
+[node name="SpawnEntity" parent="WaveController7/Waves/Wave" instance=ExtResource( 6 )]
+
+[node name="SpawnEntity2" parent="WaveController7/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( 91.3967, -32 )
+
+[node name="SpawnEntity3" parent="WaveController7/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( -92.7256, 50.4069 )
+
+[node name="SpawnEntity4" parent="WaveController7/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( 100.822, 40.6678 )
+
+[node name="Door" parent="WaveController7/Doors" index="0" instance=ExtResource( 3 )]
+position = Vector2( 220.164, -55.4374 )
+
+[node name="Door2" parent="WaveController7/Doors" index="1" instance=ExtResource( 3 )]
+position = Vector2( -90.4206, -116.984 )
+rotation = -1.57079
+
 [editable path="tilemapactual"]
 [editable path="WaveController"]
 [editable path="WaveController2"]
@@ -264,5 +266,5 @@ rotation = 1.57079
 [editable path="WaveController4"]
 [editable path="WaveController5"]
 [editable path="WaveController6"]
-[editable path="WaveController7"]
 [editable path="WaveController8"]
+[editable path="WaveController7"]
