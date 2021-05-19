@@ -27,13 +27,18 @@ func _process(delta):
 	for s in active_states:
 		var cur=states[s]
 		var newst=cur.get_transition()
-
-		if newst=="exit" :
-			_deactivate(s)
-		elif newst!=null:
-			request_state(newst)
-		else :
+		
+		if newst==null:
 			cur._during_state(delta)
+		else:
+			if newst is String:
+				if newst.begins_with("exit") : 
+					newst.erase(0,"exit".length())
+					_deactivate(s)
+				request_state(newst)
+			elif newst is Array:
+				for st in newst:
+					request_state(st)
 	pass
 
 func _deactivate(s:String):

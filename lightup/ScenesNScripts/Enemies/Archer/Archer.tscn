@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ScenesNScripts/Enemies/Archer/Archer.gd" type="Script" id=1]
+[ext_resource path="res://ScenesNScripts/Enemies/Archer/SM/SM.gd" type="Script" id=2]
+[ext_resource path="res://ScenesNScripts/Enemies/Archer/Idle.gd" type="Script" id=3]
+[ext_resource path="res://ScenesNScripts/Enemies/Archer/Aim.gd" type="Script" id=4]
+[ext_resource path="res://ScenesNScripts/Enemies/Archer/Chase.gd" type="Script" id=5]
+[ext_resource path="res://ScenesNScripts/StateMachineShower.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 14.44 )
+
+[node name="Archer" type="KinematicBody2D"]
+collision_layer = 4
+script = ExtResource( 1 )
+speed = 100.0
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource( 3 )
+
+[node name="Chase" type="Node" parent="StateMachine"]
+script = ExtResource( 5 )
+active = true
+
+[node name="Aim" type="Node" parent="StateMachine"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ShootPoint" type="Position2D" parent="."]
+position = Vector2( -15.0137, -11.1488 )
+
+[node name="SMShower" parent="." instance=ExtResource( 6 )]

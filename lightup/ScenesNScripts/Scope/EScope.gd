@@ -4,11 +4,18 @@ onready var line=$Line
 onready var hit_timer=$HitTimer
 
 
+export var time=5
+
+
+signal finish()
+
 var state:="chase"
 # chase -> finished
 var width=1
 var colors=[Color.darkred, Color.red]
 
+func _ready():
+	$HitTimer.wait_time=time
 
 func _process(delta):
 	line.points[1].x=width
@@ -25,8 +32,9 @@ func _process(delta):
 func die():
 	queue_free()
 
-func is_finished()->bool:
+func finished()->bool:
 	return state=="finished"
 
 func _on_HitTimer_timeout():
+	emit_signal("finish")
 	state="finished"

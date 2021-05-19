@@ -4,6 +4,7 @@ class_name MBody
 onready var sm=$StateMachine
 
 export var health:=100.0
+export var max_health:=100.0
 export var speed:=200.0
 
 var velos:=Vector2.ZERO
@@ -19,6 +20,8 @@ func add_buff(buff_name:String):
 	# sm.add_state(buff)
 	# sm.request_state(buff.name)
 
+func get_hit():
+	health-=10
 
 func add_gravity():
 	velos.y+=Globals.gravity # it's 20
