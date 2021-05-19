@@ -1,5 +1,7 @@
 extends MBody
 
+export var damage:=20.0
+
 var direction:=Vector2(-1,0)
 var dead:=false
 onready var hb=$HitBox
@@ -16,12 +18,13 @@ func _process(delta):
 		if dead :
 			queue_free()
 	else: velos=direction*speed
-
 func die():
 	hb.queue_free()
 	sp.play("die")
 
 func _on_HitBox_body_entered(body):
+	if body.has_method("damage"):
+		body.damage(damage)
 	die()
 
 func _on_AnimatedSprite_animation_finished():

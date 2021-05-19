@@ -5,3 +5,4 @@ class_name Enemy
 #var dist2actor=INF
 
 export var attack_range:=70
+export var damage:=20

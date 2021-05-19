@@ -32,57 +32,36 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="AchievementAnnoucement" type="CenterContainer"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 456.264
-margin_top = 46.7217
-margin_right = 496.264
-margin_bottom = 86.7217
-rect_scale = Vector2( 1.7, 1.7 )
+[node name="AchievementAnnoucement" type="VBoxContainer"]
+margin_left = -34.6491
+margin_right = 35.3509
+margin_bottom = 198.0
+rect_scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Control" parent="."]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 20.0
-margin_bottom = 20.0
-
-[node name="CenterContainer" type="CenterContainer" parent="Control"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -87.0
-margin_top = 48.7217
-margin_right = 87.0
-margin_bottom = 67.7217
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Control/CenterContainer"]
-margin_right = 174.0
-margin_bottom = 19.0
-custom_fonts/font = ExtResource( 1 )
-text = "asdasdasdasdadsasdasdasdasd"
-expand_icon = true
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -32.0
-margin_top = -24.0271
-margin_right = 32.0
-margin_bottom = 39.9729
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Message" type="RichTextLabel" parent="."]
+margin_top = 74.0
+margin_right = 70.0
+margin_bottom = 194.0
+rect_min_size = Vector2( 70, 120 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "asdasdasdasdadsasdasdasdasd"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/enter = SubResource( 1 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

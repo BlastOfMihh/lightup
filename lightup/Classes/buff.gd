@@ -4,7 +4,7 @@ class_name Buff
 onready var annoucer=preload("res://ScenesNScripts/Achievements/AchievementAnnoucement.tscn")
 
 export(Texture) var icon_image
-export var buff_display="HUD/BuffDisplay"
+export var buff_display="Canvas/HUD/BuffDisplay"
 export(bool) var annouce=false
 export(String) var text="\nWhy u do this?"
 
@@ -45,7 +45,7 @@ func enter_state(old_states):
 		var x=annoucer.instance()
 		x.text=state_name+": "+text
 		x.texture=icon_image
-		pr.hud.add_child(x)
+		pr.hud.get_node("AchievDisplay").add_child(x)
 		
 	icon=TextureRect.new()
 	icon.texture=icon_image

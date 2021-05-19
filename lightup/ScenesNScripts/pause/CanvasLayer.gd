@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	rect_position=get_viewport().size/2*(-1)
+#	rect_position=get_viewport().size/2*(-1)
 	visible=true
 	set_visible(false)
 

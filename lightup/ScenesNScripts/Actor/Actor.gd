@@ -8,8 +8,10 @@ onready var sr=$SwordRooster
 
 onready var ap=$AnimationPlayer
 onready var sp=$Visuals/AnimatedSprite
-onready var invs=get_node("UI/InvsContainer").get_children() #[$UI/InventoryContainer, $UI/InventoryContainer2]
-onready var hud=$HUD
+onready var invs=get_node("Canvas/UI/InvsContainer").get_children() #[$UI/InventoryContainer, $UI/InventoryContainer2]
+onready var hud=$Canvas/HUD
+
+onready var death_screen=preload("res://Screen/DeathScreen.tscn")
 
 func _ready():
 	Globals.actor=self
@@ -22,13 +24,16 @@ func update_dir():
 func update_velos(delta):
 	velos=dir*speed
 	velos*=velos_multiplier/100.0
-	
+
+func _process(delta):
+	if hp<=0:
+		sm.request_state("Dead")
+		get_tree().root.add_child(death_screen.instance())
 
 func _physics_process(delta):
-	if Input.is_key_pressed(KEY_T):
-		sm.request_state("Slowness")
+#	if Input.is_key_pressed(KEY_T):
+#		sm.request_state("Dead")
 	update_dir()
-	# update_velos(delta)
 	apply_velos(delta)
  
 func hurt():
