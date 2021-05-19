@@ -8,7 +8,7 @@ export var texture:Texture
 export (PackedScene) var passive
 export (Array, PackedScene) var spells
 
-export var count:=1
+export var count:=0
 
 
 # export (Array, Resource) var items

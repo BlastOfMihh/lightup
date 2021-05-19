@@ -7,8 +7,11 @@ func _ready():
 	conflicting_states=[]
 	removing_states=["Chase"]
 	necessary_states=[]
-	
-	
+
+func setup_scope():
+	scope=scope_tscn.instance()
+	scope.time=pr.fire_time
+	pr.add_child(scope)
 
 func get_transition():
 	if scope.finished():
@@ -17,8 +20,7 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
-	scope=scope_tscn.instance()
-	pr.add_child(scope)
+	setup_scope()
 
 func exit_state(new_states):
 	scope.queue_free()

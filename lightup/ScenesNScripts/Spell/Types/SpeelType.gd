@@ -1,6 +1,19 @@
 extends Node2D
 class_name SpellType
 
+export var damamge:=100
+
+onready var pr=get_parent()
+onready var ap=$AnimationPlayer
+onready var spell_pos=$SpellPos
+
+
+func rotate_after_actor():
+	rotation = (Globals.actor.global_position-get_global_mouse_position()).angle()+PI
+
+func enter_setup():
+	pass
+
 func enter_idle()->void:
 	pass
 func exit_idle()->void:

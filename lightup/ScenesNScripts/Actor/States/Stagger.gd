@@ -6,7 +6,7 @@ var timer:Timer= Timer.new()
 
 func _ready():
 	conflicting_states=[]
-	removing_states=["Walk", "Stand"]
+	removing_states=["Walk", "Stand", "CastSpell","Dash","Idle"]
 	necessary_states=[]
 	timer.wait_time=2.0
 	timer.one_shot=true
@@ -14,7 +14,7 @@ func _ready():
 
 func get_transition():
 	if timer.time_left==0:
-		return "Stand"
+		return ["Stand", "Idle"]
 	return null
 
 

@@ -9,8 +9,11 @@ func _ready():
 func get_transition():
 	# if Input.is_action_just_pressed("change_mode"):
 	# if Input.is_action_just_pressed("spell0"):
-	if pr.get_spell_number()>=0:
-		return "CastSpell"
+	var spell_nr=pr.get_spell_number()
+	if spell_nr>=0:
+		var first_sword=pr.invs[spell_nr].inv.first_item()
+		if first_sword and first_sword.count>0:
+			return "CastSpell"
 	return null
 
 func enter_state(old_states):

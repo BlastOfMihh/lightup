@@ -29,3 +29,8 @@ func _on_HitBox_body_entered(body):
 
 func _on_AnimatedSprite_animation_finished():
 	dead=true
+
+
+func _on_HitBox_area_entered(area):
+	_on_HitBox_body_entered(area)
+
