@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Icons/icons v2/sprite_00.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/UI/Inventory/InventorySlotDisplay.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/singuru_font.tres" type="DynamicFont" id=3]
 
 [node name="InventorySlotDisplay" type="CenterContainer"]
 anchor_right = 1.0
@@ -29,3 +30,18 @@ margin_bottom = 160.0
 rect_min_size = Vector2( 20, 20 )
 size_flags_horizontal = 3
 stretch_mode = 4
+
+[node name="CountLabel" type="Label" parent="ItemTextureRect"]
+anchor_left = 0.6
+anchor_top = 0.642
+anchor_right = 0.6
+anchor_bottom = 0.642
+margin_left = 1.73239
+margin_top = -3.6314
+margin_right = 41.7324
+margin_bottom = 12.3686
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}

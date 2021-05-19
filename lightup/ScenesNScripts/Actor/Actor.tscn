@@ -265,12 +265,13 @@ margin_right = 18.7113
 margin_bottom = 3.68263
 
 [node name="InvsContainer" type="GridContainer" parent="Canvas/UI"]
-margin_left = 6.22464
-margin_top = 45.3049
-margin_right = 74.2246
-margin_bottom = 225.305
+margin_left = 9.84572
+margin_top = 51.1051
+margin_right = 77.8457
+margin_bottom = 231.105
 columns = 20
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -296,10 +297,10 @@ margin_left = 0.0
 margin_right = 20.0
 
 [node name="Button2" type="Button" parent="Canvas/UI"]
-margin_left = 2.1619
-margin_top = 232.811
-margin_right = 83.1619
-margin_bottom = 252.811
+margin_left = 396.707
+margin_top = 216.535
+margin_right = 477.707
+margin_bottom = 236.535
 custom_fonts/font = SubResource( 5 )
 text = "Achievements"
 __meta__ = {
@@ -307,10 +308,10 @@ __meta__ = {
 }
 
 [node name="AchievementDisplay" type="GridContainer" parent="Canvas/UI"]
-margin_left = 5.10171
-margin_top = 256.599
-margin_right = 45.1022
-margin_bottom = 296.599
+margin_left = 400.77
+margin_top = 248.181
+margin_right = 440.77
+margin_bottom = 288.181
 columns = 10
 __meta__ = {
 "_edit_use_anchors_": false
@@ -344,10 +345,10 @@ margin_bottom = 35.1244
 color = Color( 0.615686, 0.0352941, 0.0352941, 1 )
 
 [node name="AchievDisplay" type="VBoxContainer" parent="Canvas/HUD"]
-margin_left = 9.0
-margin_top = 42.0
-margin_right = 40.0
-margin_bottom = 256.0
+margin_left = 397.372
+margin_top = 50.9797
+margin_right = 428.372
+margin_bottom = 264.98
 __meta__ = {
 "_edit_use_anchors_": false
 }

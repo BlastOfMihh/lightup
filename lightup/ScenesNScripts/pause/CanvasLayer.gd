@@ -10,7 +10,7 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
-
+		pass
 func _on_Button_pressed():
 	get_tree().paused=false
 	set_visible(false)

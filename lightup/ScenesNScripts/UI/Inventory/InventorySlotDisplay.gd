@@ -1,23 +1,23 @@
 extends CenterContainer
 
 
-# onready var ic=get_parent().ic
 onready var ic = get_parent().get_parent().get_parent()
 onready var item_texture_rect=$ItemTextureRect
-# onready var inventory = preload("res://Resources/inventory.tres")
+onready var count_label=$ItemTextureRect/CountLabel 
 var inventory = null
 
 
 func _ready():
 	yield(ic, "ready")
-	# print(ic.inv)
 	inventory=ic.inv
 
 
 func display_item(item):
 	if item is Item:
 		item_texture_rect.texture=item.texture
+		count_label.text=str(item.count)
 	else:
+		count_label.text=""
 		item_texture_rect.texture=load("res://Assets/Icons/empty_inventory_slot.png")
 
 func get_drag_data(_position):
