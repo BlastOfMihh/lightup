@@ -9,4 +9,4 @@ script = ExtResource( 1 )
 name = "Gold Sword"
 texture = ExtResource( 2 )
 spells = [ ExtResource( 3 ), null, null ]
-count = 1
+count = 0

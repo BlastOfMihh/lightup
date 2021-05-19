@@ -38,7 +38,9 @@ func _process(delta):
 				request_state(newst)
 			elif newst is Array:
 				for st in newst:
-					request_state(st)
+					if st=="exit":
+						_deactivate(s)
+					else: request_state(st)
 	pass
 
 func _deactivate(s:String):

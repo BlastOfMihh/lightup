@@ -5,10 +5,10 @@ export var dash_init_speed=300
 export var dash_friction=950
 export var playback_speed=6.0
 
-onready var pr=get_parent()
-onready var ap=$AnimationPlayer
+#onready var pr=get_parent()
+#onready var ap=$AnimationPlayer
 onready var sp=$SpellPos/KinematicBody2D/AnimatedSprite
-onready var spell_pos=$SpellPos
+#onready var spell_pos=$SpellPos
 onready var razor=$SpellPos/Razor
 var ap_finished=false
 

@@ -1,11 +1,6 @@
 extends SpellType
 
-
-onready var pr=get_parent()
-onready var ap=$AnimationPlayer
-onready var spell_pos=$SpellPos
-
-export var spell_range=35
+export var cast_range=35
 export var dash_init_speed=300
 export var dash_friction=950
 export var playback_speed=6.0
@@ -14,14 +9,12 @@ export var max_cast_count=3
 var cast_count:=0
 var ap_finished=false
 
-func rotate_after_actor():
-	rotation = (Globals.actor.global_position-get_global_mouse_position()).angle()+PI
-	
+
 func enter_setup():
 	rotate_after_actor()
 
 func _ready():
-	spell_pos.position.x=spell_range
+	spell_pos.position.x=cast_range
 
 func enter_idle()->void:
 	# print("hello there")

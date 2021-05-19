@@ -6,7 +6,7 @@ func _ready():
 	necessary_states=[]
 
 func get_transition():
-	return "exit"+"Chase"
+	return [ "exit", "Chase"]
 	return null
 
 func enter_state(old_states):

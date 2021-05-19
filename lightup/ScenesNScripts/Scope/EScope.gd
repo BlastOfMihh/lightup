@@ -3,16 +3,14 @@ extends Node2D
 onready var line=$Line
 onready var hit_timer=$HitTimer
 
-
-export var time=5
-
-
 signal finish()
+export var time=5
 
 var state:="chase"
 # chase -> finished
 var width=1
 var colors=[Color.darkred, Color.red]
+
 
 func _ready():
 	$HitTimer.wait_time=time

@@ -9,3 +9,4 @@ func add_projectile():
 	prj.direction=-(pr.global_position - Globals.actor.global_position).normalized()
 	prj.damage=damage
 	pr.get_parent().add_child(prj)
+

@@ -14,7 +14,9 @@ func set_item(index, item):
 	emit_signal("items_changed", [index])
 	return prev_item
 
+
 func add_item(item)->void:
+	item.count+=1
 	var idx=0
 #	for i in items:
 #		if i and i.name==item.name:
