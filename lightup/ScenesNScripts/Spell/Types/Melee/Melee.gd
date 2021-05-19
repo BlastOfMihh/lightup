@@ -10,6 +10,12 @@ onready var ap=$AnimationPlayer
 onready var spell_pos=$SpellPos
 var ap_finished=false
 
+func rotate_after_actor():
+	rotation = (Globals.actor.global_position-get_global_mouse_position()).angle()+PI
+	
+func enter_setup():
+	rotate_after_actor()
+
 func _ready():
 	spell_pos.position.x=spell_range
 
@@ -19,7 +25,8 @@ func enter_idle()->void:
 func exit_idle()->void:
 	pass
 func during_idle()->void:
-	rotation = (Globals.actor.global_position-get_global_mouse_position()).angle()+PI
+	rotate_after_actor()
+#	rotation = (Globals.actor.global_position-get_global_mouse_position()).angle()+PI
 	pass
 func get_transition_idle():
 	if Input.is_action_pressed("attack"):

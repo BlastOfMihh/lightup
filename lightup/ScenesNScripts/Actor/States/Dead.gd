@@ -7,8 +7,6 @@ func _ready():
 	for s in sm.get_children():
 		removing_states.push_back(s.state_name)
 	removing_states.erase("Dead")
-	for s in removing_states:
-		print(s)
 	necessary_states=[]
 
 func get_transition():

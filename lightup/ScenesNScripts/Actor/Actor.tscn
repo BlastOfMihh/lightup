@@ -355,7 +355,7 @@ color = Color( 0.615686, 0.0352941, 0.0352941, 1 )
 
 [node name="AchievDisplay" type="VBoxContainer" parent="Canvas/HUD"]
 margin_left = 423.0
-margin_top = 26.0
+margin_top = 17.0
 margin_right = 463.0
 margin_bottom = 231.0
 __meta__ = {
