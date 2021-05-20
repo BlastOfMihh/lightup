@@ -10,6 +10,11 @@ onready var buffs={
 	
 	}
 
+var muz=preload("res://musica.tscn")
+
+func _ready():
+	get_tree().root.add_child(muz.instance())
+
 var achievements={
 	"NotCoolBro":{
 		

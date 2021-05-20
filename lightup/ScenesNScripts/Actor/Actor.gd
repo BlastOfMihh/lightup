@@ -14,6 +14,7 @@ onready var hud=$Canvas/HUD
 onready var death_screen=preload("res://Screen/DeathScreen.tscn")
 
 func _ready():
+	add_child(Globals.muz.instance())
 	visible=true
 	Globals.actor=self
 	#yield(self, "ready")
