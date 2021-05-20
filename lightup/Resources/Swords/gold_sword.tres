@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://Resources/Item.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Icons/gold_sword_icon.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Swords/sprite_0.png" type="Texture" id=2]
 [ext_resource path="res://ScenesNScripts/Spell/Passives/Feather.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Subtypes/MelleGold.tscn" type="PackedScene" id=4]
 
