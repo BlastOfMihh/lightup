@@ -27,5 +27,7 @@ func die():
 	pass
 
 func _process(delta):
+	if Input.is_key_pressed(KEY_Y):
+		die()
 	if hp<=0:
 		queue_free()
