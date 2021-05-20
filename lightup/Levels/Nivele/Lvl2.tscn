@@ -301,6 +301,60 @@ position = Vector2( 30.6561, -41.371 )
 position = Vector2( -32, 40 )
 entity = ExtResource( 5 )
 
+[node name="WaveController7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 530, -404 )
+
+[node name="CollisionShape2D" parent="WaveController7/AreaRange" index="0"]
+shape = SubResource( 6 )
+
+[node name="Wave" parent="WaveController7/Waves" index="0" instance=ExtResource( 4 )]
+
+[node name="SpawnEntity" parent="WaveController7/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( -48, -24 )
+
+[node name="SpawnEntity2" parent="WaveController7/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 56, 56 )
+
+[node name="SpawnEntity3" parent="WaveController7/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 40, -8 )
+
+[node name="SpawnEntity5" parent="WaveController7/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( -57.3439, -57.371 )
+
+[node name="SpawnEntity6" parent="WaveController7/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 46.6561, 22.629 )
+
+[node name="SpawnEntity7" parent="WaveController7/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( 30.6561, -41.371 )
+
+[node name="SpawnEntity4" parent="WaveController7/Waves/Wave" instance=ExtResource( 7 )]
+position = Vector2( -32, 40 )
+entity = ExtResource( 5 )
+
+[node name="Wave2" parent="WaveController7/Waves" index="1" instance=ExtResource( 4 )]
+
+[node name="SpawnEntity" parent="WaveController7/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( -48, -24 )
+
+[node name="SpawnEntity2" parent="WaveController7/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 56, 56 )
+
+[node name="SpawnEntity3" parent="WaveController7/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 40, -8 )
+
+[node name="SpawnEntity5" parent="WaveController7/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( -57.3439, -57.371 )
+
+[node name="SpawnEntity6" parent="WaveController7/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 46.6561, 22.629 )
+
+[node name="SpawnEntity7" parent="WaveController7/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( 30.6561, -41.371 )
+
+[node name="SpawnEntity4" parent="WaveController7/Waves/Wave2" instance=ExtResource( 7 )]
+position = Vector2( -32, 40 )
+entity = ExtResource( 5 )
+
 [node name="PickableSwords5" parent="." instance=ExtResource( 9 )]
 position = Vector2( -0.605881, 0.752083 )
 sword = ExtResource( 10 )
@@ -328,3 +382,4 @@ count = 200
 [editable path="WaveController4"]
 [editable path="WaveController5"]
 [editable path="WaveController6"]
+[editable path="WaveController7"]
