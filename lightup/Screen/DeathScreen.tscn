@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/singuru_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Screen/DeathScreen.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://ScenesNScripts/menu/NewGame.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 3 )
 
 [node name="DeathScreen" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -27,16 +33,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="UI"]
-margin_left = 236.0
+[node name="RichTextLabel" type="RichTextLabel" parent="UI"]
+margin_left = 193.934
 margin_top = 130.0
-margin_right = 336.0
+margin_right = 293.934
 margin_bottom = 200.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="UI/CenterContainer"]
-margin_right = 100.0
-margin_bottom = 70.0
 rect_min_size = Vector2( 100, 70 )
+rect_scale = Vector2( 3.19729, 3.229 )
 size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_fonts/normal_font = ExtResource( 1 )
@@ -46,9 +49,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NewGame" type="Button" parent="UI"]
+margin_left = -163.086
+margin_top = 233.335
+margin_right = 698.914
+margin_bottom = 277.335
+rect_scale = Vector2( 0.988952, 1.16168 )
+custom_fonts/font = SubResource( 1 )
+text = "Menu"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
 autostart = true
 
+[connection signal="pressed" from="UI/NewGame" to="UI/NewGame" method="_on_NewGame_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -9,7 +9,7 @@
 hp = 20.0
 attack_range = 250
 damage = 3
-fire_time = 0.1
+fire_time = 0.3
 
 [node name="Visuals" parent="Archer" index="5"]
 modulate = Color( 0.972549, 0.113725, 1, 1 )
