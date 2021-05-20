@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://NewTilemap/new_tilemap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/Dungeon/Pieces/LevelChanger.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ScenesNScripts/Waves/Controller/WaveController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ScenesNScripts/Waves/Wave/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ScenesNScripts/Enemies/GlassArcher.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ScenesNScripts/Spawn/SpawnEntity.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ScenesNScripts/Waves/Wave/Wave.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 200.297, 200 )
 
 [node name="Lvl3" type="Node2D"]
 
@@ -16,4 +25,97 @@ tile_data = PoolIntArray( -1310693, 6, 0, -1114090, 4, 0, -1114086, 536870916, 0
 [node name="LevelChanger" parent="." instance=ExtResource( 2 )]
 position = Vector2( 388.453, -327.152 )
 
+[node name="WaveController" parent="." instance=ExtResource( 3 )]
+position = Vector2( 384, 0 )
+
+[node name="CollisionShape2D" parent="WaveController/AreaRange" index="0"]
+shape = SubResource( 1 )
+
+[node name="Wave" parent="WaveController/Waves" index="0" instance=ExtResource( 7 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( -120, 96 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( 96, 48 )
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( -80, -88 )
+
+[node name="SpawnEntity4" parent="WaveController/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( 48, -88 )
+
+[node name="SpawnEntity5" parent="WaveController/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( 72, 88 )
+
+[node name="SpawnEntity6" parent="WaveController/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( -24, 168 )
+
+[node name="SpawnEntity7" parent="WaveController/Waves/Wave" instance=ExtResource( 6 )]
+position = Vector2( 35.6625, -168 )
+
+[node name="Wave2" parent="WaveController/Waves" index="1" instance=ExtResource( 7 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave2" instance=ExtResource( 6 )]
+position = Vector2( -120, 0 )
+entity = ExtResource( 5 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave2" instance=ExtResource( 6 )]
+position = Vector2( 152, 0 )
+entity = ExtResource( 5 )
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave2" instance=ExtResource( 6 )]
+position = Vector2( 11.6625, -104 )
+entity = ExtResource( 5 )
+
+[node name="SpawnEntity4" parent="WaveController/Waves/Wave2" instance=ExtResource( 6 )]
+position = Vector2( 11.6625, -104 )
+entity = ExtResource( 5 )
+
+[node name="Wave3" parent="WaveController/Waves" index="2" instance=ExtResource( 7 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave3" instance=ExtResource( 6 )]
+position = Vector2( 160, -40 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave3" instance=ExtResource( 6 )]
+position = Vector2( 208, 56 )
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave3" instance=ExtResource( 6 )]
+position = Vector2( -120, -112 )
+
+[node name="SpawnEntity4" parent="WaveController/Waves/Wave3" instance=ExtResource( 6 )]
+position = Vector2( -136, 128 )
+
+[node name="SpawnEntity5" parent="WaveController/Waves/Wave3" instance=ExtResource( 6 )]
+position = Vector2( 0, 16 )
+entity = ExtResource( 5 )
+
+[node name="Wave4" parent="WaveController/Waves" index="3" instance=ExtResource( 7 )]
+
+[node name="SpawnEntity" parent="WaveController/Waves/Wave4" instance=ExtResource( 6 )]
+position = Vector2( -80, 64 )
+entity = ExtResource( 5 )
+
+[node name="SpawnEntity2" parent="WaveController/Waves/Wave4" instance=ExtResource( 6 )]
+position = Vector2( 104, -56 )
+entity = ExtResource( 5 )
+
+[node name="SpawnEntity3" parent="WaveController/Waves/Wave4" instance=ExtResource( 6 )]
+position = Vector2( -128, -72 )
+entity = ExtResource( 5 )
+
+[node name="Door2" parent="WaveController/Doors" index="0" instance=ExtResource( 4 )]
+position = Vector2( 8, -293.577 )
+rotation = -1.57079
+scale = Vector2( 4.16, 1 )
+
+[node name="Door3" parent="WaveController/Doors" index="1" instance=ExtResource( 4 )]
+position = Vector2( -280, -3.8147e-06 )
+rotation = -3.14159
+scale = Vector2( 4.16, 1 )
+
+[node name="Actor" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2.7113, -4.31737 )
+
 [editable path="new_tilemap"]
+[editable path="WaveController"]
