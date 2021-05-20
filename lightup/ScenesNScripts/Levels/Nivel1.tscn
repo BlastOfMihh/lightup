@@ -48,3 +48,14 @@ count = 100
 
 [node name="MeleeArcher" parent="." instance=ExtResource( 7 )]
 position = Vector2( 306.185, 126.606 )
+
+[node name="Archer" parent="MeleeArcher" index="0"]
+fire_time = 0.3
+
+[node name="DestroyTimer" parent="MeleeArcher" index="1"]
+wait_time = 32123.0
+
+[editable path="MeleeArcher"]
+[editable path="MeleeArcher/Archer"]
+[editable path="MeleeArcher/Archer/HurtBox"]
+[editable path="MeleeArcher/Archer/StateMachine/Stagger"]

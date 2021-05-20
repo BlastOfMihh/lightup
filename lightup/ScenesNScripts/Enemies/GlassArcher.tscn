@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ScenesNScripts/Enemies/Archer/Archer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ScenesNScripts/EntityComponents/DestroyTimer.tscn" type="PackedScene" id=2]
 
 [node name="GlassArcher" type="Node2D"]
 
@@ -12,6 +13,9 @@ fire_time = 0.3
 
 [node name="Visuals" parent="Archer" index="5"]
 modulate = Color( 0.972549, 0.113725, 1, 1 )
+
+[node name="DestroyTimer" parent="." instance=ExtResource( 2 )]
+wait_time = 4.0
 
 [editable path="Archer"]
 [editable path="Archer/HurtBox"]
