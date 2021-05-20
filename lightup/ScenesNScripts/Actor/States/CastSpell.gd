@@ -25,6 +25,7 @@ func enter_state(old_states):
 	sword=pr.invs[spell_nr].inv.first_item()
 	sword.count-=sword.spell_costs[spell_nr]
 	spell.type= (sword.spells[spell_nr])
+	spell.sword=sword
 	Globals.update_display_inv()
 	pr.add_child(spell)
 

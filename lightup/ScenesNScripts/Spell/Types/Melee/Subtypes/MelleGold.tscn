@@ -1,13 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.gd" type="Script" id=1]
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/SpellPos.tscn" type="PackedScene" id=2]
 
-[node name="Melee" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id=1]
+height = 31.2169
+
+[node name="MelleGold" type="Node2D"]
 script = ExtResource( 1 )
-cast_range = 17
+cast_range = 100
 
 [node name="SpellPos" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D" parent="SpellPos/HitBox" index="0"]
+position = Vector2( -15.22, -3.8147e-06 )
+rotation = 1.57079
+shape = SubResource( 1 )
 
 [editable path="SpellPos"]
 [editable path="SpellPos/HitBox"]

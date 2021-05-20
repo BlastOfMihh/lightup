@@ -3,11 +3,7 @@
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.gd" type="Script" id=1]
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/SpellPos.tscn" type="PackedScene" id=2]
 
-[node name="Melee" type="Node2D"]
+[node name="MelleFeather" type="Node2D"]
 script = ExtResource( 1 )
-cast_range = 17
 
 [node name="SpellPos" parent="." instance=ExtResource( 2 )]
-
-[editable path="SpellPos"]
-[editable path="SpellPos/HitBox"]

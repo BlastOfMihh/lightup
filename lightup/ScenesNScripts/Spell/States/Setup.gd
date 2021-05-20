@@ -15,6 +15,7 @@ func enter_state(old_states):
 
 #	print("srtupu")
 	pr.cspell=pr.type.instance()
+	pr.cspell.sword_icon=pr.sword.texture
 	Globals.actor.add_child(pr.cspell)
 	pr.cspell.enter_setup()
 	pass

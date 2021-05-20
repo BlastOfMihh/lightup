@@ -5,16 +5,21 @@ export var dash_init_speed=300
 export var dash_friction=950
 export var playback_speed=6.0
 export var max_cast_count=3
+ 
 
+onready var spell_icon=$SpellPos/spell_icon
 var cast_count:=0
 var ap_finished=false
 
-
+func _ready():
+	ap.connect("animation_finished",self,"_on_AnimationPlayer_animation_finished")
+#	ap=get_child(0).get_node("AnimationPlayer")
+	spell_pos.position.x=cast_range
+	
 func enter_setup():
+	spell_icon.texture=sword_icon
 	rotate_after_actor()
 
-func _ready():
-	spell_pos.position.x=cast_range
 
 func enter_idle()->void:
 	# print("hello there")

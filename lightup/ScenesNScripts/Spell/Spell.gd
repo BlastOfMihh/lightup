@@ -10,6 +10,7 @@ export (PackedScene) var type
 onready var sm=$StateMachine 
 
 var cspell=null
+var sword
 
 func die():
 	cspell.queue_free()

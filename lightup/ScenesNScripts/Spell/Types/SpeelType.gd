@@ -3,10 +3,12 @@ class_name SpellType
 
 export var cost:=4
 export var damage:=35
+export (Texture) var sword_icon
 
 onready var actor=Globals.actor
 onready var pr=get_parent()
-onready var ap=$AnimationPlayer
+onready var ap=get_child(0).get_node("AnimationPlayer")
+#onready var ap=$AnimationPlayer
 onready var spell_pos=$SpellPos
 
 func _ready():
