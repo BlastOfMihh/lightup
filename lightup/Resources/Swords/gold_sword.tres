@@ -3,7 +3,7 @@
 [ext_resource path="res://Resources/Item.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Swords/sprite_0.png" type="Texture" id=2]
 [ext_resource path="res://ScenesNScripts/Spell/Passives/Feather.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ScenesNScripts/Spell/Types/Melee/MeleeGold.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Subtypes/MelleGold.tscn" type="PackedScene" id=4]
 
 [resource]
 script = ExtResource( 1 )

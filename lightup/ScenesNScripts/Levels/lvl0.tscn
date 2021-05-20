@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://ScenesNScripts/tile/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/Dungeon/Pieces/LevelChanger.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/RAT.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ScenesNScripts/Waves/Wave/Door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Resources/Swords/tabla_sword.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Swords/gold_sword.tres" type="Resource" id=12]
+[ext_resource path="res://Levels/Nivele/Lvl1.tscn" type="PackedScene" id=13]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 141.465
@@ -116,13 +118,14 @@ sword = ExtResource( 11 )
 
 [node name="PickableSwords3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 47.1805, 74.8353 )
-sword = ExtResource( 11 )
+sword = ExtResource( 12 )
+count = 23
 
 [node name="PickableSwords4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 502.734, 63.9457 )
 
 [node name="LevelChanger" parent="." instance=ExtResource( 2 )]
 position = Vector2( 501.11, -238.497 )
-next_level = null
+next_level = ExtResource( 13 )
 
 [editable path="WaveController"]
