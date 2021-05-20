@@ -7,7 +7,7 @@ onready var hurtb=$HurtBox
 
 export var attack_range:=70
 export var damage:=20
-export var fire_time:=2
+export var fire_time:=2.0
 
 func _ready():
 	hurtb.connect("area_entered", self, "_on_HurtBox_area_entered")
