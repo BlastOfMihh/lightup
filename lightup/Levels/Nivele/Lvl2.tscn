@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NewTilemap/new_tilemap.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://ScenesNScripts/Spawn/SpawnEntity.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ScenesNScripts/Waves/Wave/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ScenesNScripts/Sword/Pickable/PickableSword.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Resources/Swords/tabla_sword.tres" type="Resource" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 106.189, 124.834 )
@@ -299,6 +300,10 @@ position = Vector2( 30.6561, -41.371 )
 [node name="SpawnEntity4" parent="WaveController6/Waves/Wave2" instance=ExtResource( 7 )]
 position = Vector2( -32, 40 )
 entity = ExtResource( 5 )
+
+[node name="PickableSwords5" parent="." instance=ExtResource( 9 )]
+position = Vector2( -0.605881, 0.752083 )
+sword = ExtResource( 10 )
 
 [node name="PickableSwords" parent="." instance=ExtResource( 9 )]
 position = Vector2( -406.272, -90.41 )

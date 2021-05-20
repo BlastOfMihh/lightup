@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://NewTilemap/new_tilemap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ScenesNScripts/Sword/Pickable/PickableSword.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ScenesNScripts/Enemies/GlassArcher.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Resources/Swords/gold_sword.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Swords/tabla_sword.tres" type="Resource" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 156.469, 194.729 )
@@ -53,6 +54,10 @@ position = Vector2( -129.462, -339.105 )
 sword = ExtResource( 10 )
 count = 70
 
+[node name="PickableSwords6" parent="." instance=ExtResource( 8 )]
+position = Vector2( -8.1918, 6.66351 )
+sword = ExtResource( 11 )
+
 [node name="PickableSwords5" parent="." instance=ExtResource( 8 )]
 position = Vector2( 453.881, 599.537 )
 sword = ExtResource( 10 )
@@ -63,7 +68,8 @@ position = Vector2( 708.224, 123.996 )
 count = 70
 
 [node name="PickableSwords2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -575.282, -163.161 )
+position = Vector2( -541.909, -171.637 )
+sword = ExtResource( 10 )
 count = 70
 
 [node name="Actor" parent="." instance=ExtResource( 2 )]
@@ -71,6 +77,7 @@ position = Vector2( -12.0947, 9.44738 )
 
 [node name="PickableSwords4" parent="." instance=ExtResource( 8 )]
 position = Vector2( -571.783, 136.283 )
+sword = ExtResource( 10 )
 count = 70
 
 [node name="WaveController" parent="." instance=ExtResource( 4 )]

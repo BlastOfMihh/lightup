@@ -1,12 +1,15 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://Resources/Item.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Icons/tabla_sword_icon.png" type="Texture" id=2]
+[ext_resource path="res://ScenesNScripts/Spell/Passives/Feather.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Subtypes/MelleTabla.tscn" type="PackedScene" id=4]
 
 [resource]
 script = ExtResource( 1 )
 name = "Tabla Sword"
 texture = ExtResource( 2 )
-spells = [ null, null, null ]
-spell_costs = [  ]
+passive = ExtResource( 3 )
+spells = [ ExtResource( 4 ), ExtResource( 4 ), null, null, null ]
+spell_costs = [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 count = 0

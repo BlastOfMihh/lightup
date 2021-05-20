@@ -11,5 +11,5 @@ name = "Gold Sword"
 texture = ExtResource( 2 )
 passive = ExtResource( 3 )
 spells = [ ExtResource( 4 ), ExtResource( 4 ), null, null ]
-spell_costs = [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+spell_costs = [ 5, 5, 0, 0, 0, 0, 0, 0, 0 ]
 count = 0
