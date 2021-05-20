@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://ScenesNScripts/Enemies/Archer/Archer.gd" type="Script" id=1]
 [ext_resource path="res://ScenesNScripts/Enemies/Archer/SM/SM.gd" type="Script" id=2]
@@ -7,16 +7,28 @@
 [ext_resource path="res://ScenesNScripts/Enemies/Archer/Chase.gd" type="Script" id=5]
 [ext_resource path="res://ScenesNScripts/StateMachineShower.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ScenesNScripts/HBoxes/HurtBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ScenesNScripts/EntityComponents/States/Stagger.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Actor/idle/sprite_0.png" type="Texture" id=10]
+[ext_resource path="res://ScenesNScripts/EntityComponents/States/Dash.tscn" type="PackedScene" id=11]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 12.8219
+[sub_resource type="CircleShape2D" id=1]
+radius = 9.58113
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 14.44 )
+[sub_resource type="CircleShape2D" id=4]
+radius = 6.79116
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Archer" type="KinematicBody2D"]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -27,12 +39,12 @@ speed = 100.0
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="Idle" type="Node" parent="StateMachine"]
+[node name="Stand" type="Node" parent="StateMachine"]
 script = ExtResource( 3 )
 active = true
 
@@ -42,14 +54,29 @@ script = ExtResource( 5 )
 [node name="Aim" type="Node" parent="StateMachine"]
 script = ExtResource( 4 )
 
+[node name="Stagger" parent="StateMachine" instance=ExtResource( 8 )]
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource( 3 )
+
+[node name="Dash" parent="StateMachine" instance=ExtResource( 11 )]
+
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+position = Vector2( 0, 1.78582 )
+shape = SubResource( 4 )
 
 [node name="ShootPoint" type="Position2D" parent="."]
 position = Vector2( -15.0137, -11.1488 )
 
 [node name="SMShower" parent="." instance=ExtResource( 6 )]
 
+[node name="Visuals" type="Node2D" parent="."]
+modulate = Color( 1, 0.113725, 0.113725, 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Visuals"]
+frames = SubResource( 3 )
+
 [editable path="HurtBox"]
+[editable path="StateMachine/Stagger"]

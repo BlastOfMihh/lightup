@@ -32,7 +32,8 @@ position = Vector2( 73.2422, 105.072 )
 position = Vector2( 243.716, 9.88692 )
 
 [node name="Actor" parent="." instance=ExtResource( 3 )]
-position = Vector2( 149.759, 34.1807 )
+visible = false
+position = Vector2( 156.689, 31.3459 )
 z_index = 4096
 
 [node name="rat" parent="." instance=ExtResource( 5 )]
@@ -49,7 +50,7 @@ position = Vector2( 56.1379, -62.6607 )
 position = Vector2( 145.733, 41.9051 )
 
 [node name="Archer" parent="." instance=ExtResource( 9 )]
-position = Vector2( 226.742, 31.8649 )
+position = Vector2( 198.079, 12.9661 )
 damage = 6
 fire_time = 1
 
@@ -57,3 +58,4 @@ fire_time = 1
 
 [editable path="Archer"]
 [editable path="Archer/HurtBox"]
+[editable path="Archer/StateMachine/Stagger"]

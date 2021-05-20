@@ -1,6 +1,6 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=60 format=2]
 
-[ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Actor/CARACTER 2/run din spate/sprite_1.png" type="Texture" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.gd" type="Script" id=2]
 [ext_resource path="res://ScenesNScripts/Actor/StateMachine.gd" type="Script" id=3]
 [ext_resource path="res://ScenesNScripts/Sword/SwordRooster.gd" type="Script" id=4]
@@ -12,12 +12,12 @@
 [ext_resource path="res://ScenesNScripts/Actor/States/Stand.gd" type="Script" id=10]
 [ext_resource path="res://ScenesNScripts/StateMachineShower.tscn" type="PackedScene" id=11]
 [ext_resource path="res://ScenesNScripts/Actor/States/Walk.gd" type="Script" id=12]
-[ext_resource path="res://ScenesNScripts/Actor/States/Stagger.gd" type="Script" id=13]
-[ext_resource path="res://Assets/Actor/run laterala/sprite_1.png" type="Texture" id=14]
-[ext_resource path="res://Assets/Actor/run in sus/sprite_0.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Actor/run in sus/sprite_1.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Actor/run laterala/sprite_0.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Actor/idle/sprite_0.png" type="Texture" id=18]
+[ext_resource path="res://ScenesNScripts/EntityComponents/States/Stagger.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Actor/CARACTER 2/idle/sprite_0.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Actor/CARACTER 2/idle/sprite_1.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Actor/CARACTER 2/run din spate/sprite_0.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Actor/CARACTER 2/run/sprite_1.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Actor/CARACTER 2/run/sprite_0.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Actor/atac frontal/sprite_1.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Actor/atac frontal/sprite_3.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Actor/atac frontal/sprite_2.png" type="Texture" id=21]
@@ -25,8 +25,9 @@
 [ext_resource path="res://Assets/Actor/hat.png" type="Texture" id=23]
 [ext_resource path="res://Resources/inv2.tres" type="Resource" id=24]
 [ext_resource path="res://ScenesNScripts/UI/Inventory/InventoryContainer.tscn" type="PackedScene" id=25]
-[ext_resource path="res://ScenesNScripts/Actor/States/Dash.gd" type="Script" id=26]
+[ext_resource path="res://ScenesNScripts/EntityComponents/States/Dash.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Resources/inv3.tres" type="Resource" id=27]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_04.png" type="Texture" id=28]
 [ext_resource path="res://ScenesNScripts/Buffs/Slowness/Slowness.tscn" type="PackedScene" id=29]
 [ext_resource path="res://ScenesNScripts/Actor/States/Achieve.gd" type="Script" id=30]
 [ext_resource path="res://ScenesNScripts/Actor/States/NotCool.gd" type="Script" id=31]
@@ -41,9 +42,18 @@
 [ext_resource path="res://ScenesNScripts/Buffs/Slowness/Confused.gd" type="Script" id=40]
 [ext_resource path="res://ScenesNScripts/Actor/HealthDisplay.tscn" type="PackedScene" id=41]
 [ext_resource path="res://ScenesNScripts/Actor/States/Dead.gd" type="Script" id=42]
-[ext_resource path="res://Assets/Actor/dead/sprite_0.png" type="Texture" id=43]
-[ext_resource path="res://Assets/Actor/dead/sprite_2.png" type="Texture" id=44]
-[ext_resource path="res://Assets/Actor/dead/sprite_1.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_03.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_05.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_00.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_06.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_01.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_02.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_08.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_09.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_10.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_11.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_12.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Actor/CARACTER 2/pateu/sprite_07.png" type="Texture" id=54]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -52,22 +62,22 @@ animations = [ {
 "name": "attack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "walk_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 43 ), ExtResource( 45 ), ExtResource( 44 ) ],
+"frames": [ ExtResource( 45 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 28 ), ExtResource( 44 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ) ],
 "loop": false,
 "name": "Dead",
-"speed": 5.0
+"speed": 6.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "stand",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 18 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -159,8 +169,7 @@ active = true
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource( 12 )
 
-[node name="Stagger" type="Node" parent="StateMachine"]
-script = ExtResource( 13 )
+[node name="Stagger" parent="StateMachine" instance=ExtResource( 13 )]
 
 [node name="RotatingAttack" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
@@ -172,8 +181,7 @@ active = true
 [node name="CastSpell" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
 
-[node name="Dash" type="Node" parent="StateMachine"]
-script = ExtResource( 26 )
+[node name="Dash" parent="StateMachine" instance=ExtResource( 26 )]
 
 [node name="Achieve" type="Node" parent="StateMachine"]
 script = ExtResource( 30 )

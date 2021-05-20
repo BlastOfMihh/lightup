@@ -14,6 +14,7 @@ onready var hud=$Canvas/HUD
 onready var death_screen=preload("res://Screen/DeathScreen.tscn")
 
 func _ready():
+	visible=true
 	Globals.actor=self
 	#yield(self, "ready")
 
@@ -35,10 +36,6 @@ func _physics_process(delta):
 #		sm.request_state("Dead")
 	update_dir()
 	apply_velos(delta)
- 
-func hurt():
-	sm.request_state("Stagger")
-	# print("hurrrrt")
 
 func get_spell_number()->int:
 	for i in range(0,10):

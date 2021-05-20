@@ -22,6 +22,7 @@ func add_buff(buff_name:String):
 	# sm.request_state(buff.name)
 
 func damage(dmg):
+	sm.request_state("Stagger")
 	hp-=dmg/(armour/100.0)
 
 func add_gravity():

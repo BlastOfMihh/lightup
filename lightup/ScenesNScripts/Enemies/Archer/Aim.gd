@@ -16,7 +16,7 @@ func setup_scope():
 func get_transition():
 	if scope.finished():
 		pr.add_projectile()
-		return "Idle"
+		return "Stand"
 	return null
 
 func enter_state(old_states):

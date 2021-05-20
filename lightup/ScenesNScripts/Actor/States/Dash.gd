@@ -10,7 +10,7 @@ func _ready():
 
 func get_transition():
 	if abs(pr.velos.length())<80:
-		return "Stand"
+		return ["Stand", "exit"]
 	return null
 
 # var once=false

@@ -13,8 +13,19 @@ func _ready():
 	hurtb.connect("area_entered", self, "_on_HurtBox_area_entered")
 
 func _on_HurtBox_area_entered(area):
-	damage(area.get_parent().damage)
+	var dmg=0
+	if "damage" in area.get_parent():
+		dmg=area.get_parent().damage
+	if "damage" in area.get_parent().get_parent():
+		dmg=area.get_parent().get_parent().damage
+		print(area.get_parent().get_parent().damage)
+	print(dmg)
+	damage(dmg)
+	print(hp)
  
-	
 func die():
 	pass
+
+func _process(delta):
+	if hp<=0:
+		queue_free()

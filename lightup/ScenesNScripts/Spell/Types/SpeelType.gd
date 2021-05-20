@@ -1,7 +1,7 @@
 extends Node2D
 class_name SpellType
 
-export var damamge:=100
+export var damage:=35
 
 onready var pr=get_parent()
 onready var ap=$AnimationPlayer

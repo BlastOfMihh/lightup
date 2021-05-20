@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ScenesNScripts/Actor/States/Stagger.gd" type="Script" id=1]
+[ext_resource path="res://ScenesNScripts/EntityComponents/StagerAP.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "stagger"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.01, 0.09 ),
+"transitions": PoolRealArray( 1, 1, 40.7859 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.572549, 0.572549, 0.34902 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "stagger"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.01, 0.09 ),
+"transitions": PoolRealArray( 1, 1, 40.7859 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.572549, 0.572549, 0.34902 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Stagger" type="Node"]
+script = ExtResource( 1 )
+stagger_time = 0.4
+
+[node name="StagerAP" parent="." instance=ExtResource( 2 )]
+anims/stagger = SubResource( 1 )
+
+[node name="StagerAP2" type="AnimationPlayer" parent="."]
+anims/stagger = SubResource( 2 )
