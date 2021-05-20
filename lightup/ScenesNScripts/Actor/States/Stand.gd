@@ -11,8 +11,8 @@ export var dash_friction=950
 func get_transition():
 	if Input.is_key_pressed(SPKEY):
 		var dash=sm.request_state("Dash")
+		print("hi dash")
 		if dash:
-			print("hi dash")
 			var v=(pr.global_position-pr.get_global_mouse_position()).normalized()
 			dash.dash_vector=v
 #			dash.dash_vector=Vector2(cos(global_rotation), sin(global_rotation))*dash_init_speed

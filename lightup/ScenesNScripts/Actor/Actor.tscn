@@ -170,7 +170,7 @@ active = true
 script = ExtResource( 12 )
 
 [node name="Stagger" parent="StateMachine" instance=ExtResource( 13 )]
-stagger_time = 0.6
+stagger_time = 0.3
 
 [node name="RotatingAttack" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
