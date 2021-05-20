@@ -12,7 +12,7 @@ func get_transition():
 	var spell_nr=pr.get_spell_number()
 	if spell_nr>=0:
 		var first_sword=pr.invs[spell_nr].inv.first_item()
-		if first_sword and first_sword.count>0:
+		if first_sword and first_sword.count-first_sword.spell_costs[spell_nr]>0:
 			return "CastSpell"
 	return null
 

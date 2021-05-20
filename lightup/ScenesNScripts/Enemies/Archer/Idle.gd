@@ -10,6 +10,9 @@ func get_transition():
 	return null
 
 func enter_state(old_states):
+#	yield(get_parent(),"ready")
+	if pr.sp:
+		pr.sp.play("idle")
 	pass
 
 func exit_state(new_states):

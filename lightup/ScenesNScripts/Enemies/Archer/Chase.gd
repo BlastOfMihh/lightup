@@ -22,6 +22,7 @@ func _during_state(delta):
 
 func enter_state(old_states):
 	dist2actor=INF
+	pr.sp.play("walk")
 	pass
 
 func exit_state(new_states):

@@ -16,7 +16,7 @@ func set_item(index, item):
 
 
 func add_item(item)->void:
-	item.count+=1
+#	item.count+=1
 	var idx=0
 #	for i in items:
 #		if i and i.name==item.name:

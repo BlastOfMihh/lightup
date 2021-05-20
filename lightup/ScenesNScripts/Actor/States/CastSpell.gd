@@ -2,8 +2,9 @@ extends State #CastSpell
 
 onready var spell_instancer=preload("res://ScenesNScripts/Spell/Spell.tscn")
 
-var spell=null
 var spell_nr:=-1
+var spell=null
+var sword=null
 
 func _ready():
 	conflicting_states=[]
@@ -21,12 +22,12 @@ func get_transition():
 func enter_state(old_states):
 	spell_nr = pr.get_spell_number()
 	spell = spell_instancer.instance()
-	var first_sword=pr.invs[spell_nr].inv.first_item()
-	if first_sword:
-		spell.type= (first_sword.spells[spell_nr])
-		pr.add_child(spell)
-	else:
-		sm.request_state("Idle")
+	sword=pr.invs[spell_nr].inv.first_item()
+	sword.count-=sword.spell_costs[spell_nr]
+	spell.type= (sword.spells[spell_nr])
+	Globals.update_display_inv()
+	pr.add_child(spell)
+
 
 func exit_state(new_states):
 	if spell:

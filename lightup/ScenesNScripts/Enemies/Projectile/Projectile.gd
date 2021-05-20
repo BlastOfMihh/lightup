@@ -24,7 +24,7 @@ func die():
 
 func _on_HitBox_body_entered(body):
 	if body.has_method("damage"):
-		body.damage(damage)
+		body.damage(damage,body)
 	die()
 
 func _on_AnimatedSprite_animation_finished():

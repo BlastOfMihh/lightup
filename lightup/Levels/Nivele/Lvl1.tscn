@@ -46,8 +46,12 @@ tile_data = PoolIntArray( -2490348, 4, 0, -2162705, -536870906, 0, -2097170, 536
 [node name="LevelChanger" parent="." instance=ExtResource( 7 )]
 position = Vector2( 466.526, 613.577 )
 
+[node name="PickableSwords" parent="." instance=ExtResource( 8 )]
+position = Vector2( 81.0219, -7.8047 )
+count = 70
+
 [node name="Actor" parent="." instance=ExtResource( 2 )]
-position = Vector2( 15.5944, -1.6722 )
+position = Vector2( 20.4296, -0.831304 )
 
 [node name="YSort" type="YSort" parent="."]
 

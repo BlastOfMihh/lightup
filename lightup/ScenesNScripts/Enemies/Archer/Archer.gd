@@ -2,6 +2,7 @@ extends Enemy
 
 export var projectile=preload("res://ScenesNScripts/Enemies/Projectile/Projectile.tscn")
 onready var pr=self
+onready var sp=$Visuals/AnimatedSprite
 
 func add_projectile():
 	var prj=pr.projectile.instance()

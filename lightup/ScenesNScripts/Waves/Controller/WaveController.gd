@@ -2,6 +2,7 @@ extends Node2D
 
 onready var waves=$Waves
 onready var doors=$Doors
+onready var area=$AreaRange
 export var active:=false
 
 signal close_doors()
@@ -27,4 +28,5 @@ func _process(delta):
 
 func _on_AreaRange_body_entered(body):
 	emit_signal("close_doors")
+	area.queue_free()
 	active=true

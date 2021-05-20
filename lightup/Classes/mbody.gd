@@ -21,7 +21,7 @@ func add_buff(buff_name:String):
 	# sm.add_state(buff)
 	# sm.request_state(buff.name)
 
-func damage(dmg):
+func damage(dmg, cnode):
 	sm.request_state("Stagger")
 	hp-=dmg/(armour/100.0)
 

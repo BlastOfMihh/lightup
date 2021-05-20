@@ -20,7 +20,7 @@ func _on_HurtBox_area_entered(area):
 		dmg=area.get_parent().get_parent().damage
 		print(area.get_parent().get_parent().damage)
 	print(dmg)
-	damage(dmg)
+	damage(dmg,area)
 	print(hp)
  
 func die():

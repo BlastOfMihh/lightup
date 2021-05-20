@@ -28,6 +28,7 @@ tracks/0/keys = {
 
 [node name="Melee" type="Node2D"]
 script = ExtResource( 1 )
+cast_range = 17
 
 [node name="SpellPos" type="Position2D" parent="."]
 position = Vector2( 15, 0 )

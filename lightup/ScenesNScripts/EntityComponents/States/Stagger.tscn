@@ -5,6 +5,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "stagger"
+length = 0.04
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("../..:modulate")
@@ -13,10 +14,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.01, 0.09 ),
+"times": PoolRealArray( 0, 0.01, 0.04 ),
 "transitions": PoolRealArray( 1, 1, 40.7859 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.572549, 0.572549, 0.34902 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.572549, 0.572549, 0.223529 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]

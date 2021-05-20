@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://ScenesNScripts/Enemies/Archer/Archer.gd" type="Script" id=1]
 [ext_resource path="res://ScenesNScripts/Enemies/Archer/SM/SM.gd" type="Script" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://Assets/Actor/idle/sprite_1.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Actor/idle/sprite_0.png" type="Texture" id=10]
 [ext_resource path="res://ScenesNScripts/EntityComponents/States/Dash.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Actor/mers atac/sprite_2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Actor/run laterala/sprite_0.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Actor/run laterala/sprite_1.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Actor/mers atac/sprite_1.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Actor/mers atac/sprite_3.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Actor/mers atac/sprite_0.png" type="Texture" id=17]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 9.58113
@@ -22,18 +28,30 @@ radius = 6.79116
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "default",
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
 [node name="Archer" type="KinematicBody2D"]
-collision_layer = 4
-collision_mask = 2
+collision_layer = 20
+collision_mask = 18
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 speed = 100.0
+attack_range = 60
+damage = 30
 
 [node name="HurtBox" parent="." instance=ExtResource( 7 )]
 collision_layer = 4
@@ -61,8 +79,6 @@ script = ExtResource( 3 )
 
 [node name="Dash" parent="StateMachine" instance=ExtResource( 11 )]
 
-[node name="Sprite" type="Sprite" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1.78582 )
 shape = SubResource( 4 )
@@ -77,6 +93,7 @@ modulate = Color( 1, 0.113725, 0.113725, 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Visuals"]
 frames = SubResource( 3 )
+animation = "attack"
 
 [editable path="HurtBox"]
 [editable path="StateMachine/Stagger"]

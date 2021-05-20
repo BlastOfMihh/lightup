@@ -1,20 +1,10 @@
-extends Node2D
-class_name SpellType
+extends SpellType
 
-export var cost:=4
-export var damage:=35
+onready var flower_tscn=preload("res://ScenesNScripts/Spell/Types/Spike/SpikeFlower.tscn")
 
-onready var actor=Globals.actor
-onready var pr=get_parent()
-onready var ap=$AnimationPlayer
-onready var spell_pos=$SpellPos
+export var count:=3
 
-func _ready():
-	pass
 
-func rotate_after_actor():
-	rotation = (Globals.actor.global_position-get_global_mouse_position()).angle()+PI
-	return rotation
 func enter_setup():
 	pass
 
@@ -25,7 +15,7 @@ func exit_idle()->void:
 func during_idle()->void:
 	pass
 func get_transition_idle():
-	# return "Casting"
+	return "Casting"
 	return null
 
 
@@ -36,17 +26,24 @@ func exit_casting()->void:
 func during_casting()->void:
 	pass
 func get_transition_casting():
-	# return "Ready"
+	return "Ready"
 	return null
 
-
+export var spike_nr=4
+export var radious:=60
 
 func enter_ready()->void:
+	var flower=flower_tscn.instance()
+	flower.spike_nr=spike_nr
+	flower.radious=radious
+	flower.offset= rotate_after_actor()
+	flower.position=actor.position
+	actor.get_parent().add_child(flower)
 	pass
 func exit_ready()->void:
 	pass
 func during_ready()->void:
 	pass
 func get_transition_ready():
-	# return "Finished"
+	return "Finished"
 	return null

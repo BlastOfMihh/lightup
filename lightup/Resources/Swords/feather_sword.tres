@@ -3,7 +3,7 @@
 [ext_resource path="res://Resources/Item.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Icons/sprite_2.png" type="Texture" id=2]
 [ext_resource path="res://ScenesNScripts/Spell/Types/Melee/Melee.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ScenesNScripts/Spell/Types/RazorBlades/RazorBlades.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ScenesNScripts/Spell/Types/Spike/Spike.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ScenesNScripts/Spell/Passives/Feather.tscn" type="PackedScene" id=5]
 
 [resource]
@@ -12,4 +12,5 @@ name = "Feather Sword"
 texture = ExtResource( 2 )
 passive = ExtResource( 5 )
 spells = [ ExtResource( 3 ), ExtResource( 4 ), null, null, null ]
+spell_costs = [ 0, 4, 0, 0, 0, 0, 0, 0, 0 ]
 count = 0
