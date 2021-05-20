@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://NewTilemap/new_tilemap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://ScenesNScripts/Enemies/GlassArcher.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Resources/Swords/gold_sword.tres" type="Resource" id=10]
 [ext_resource path="res://Resources/Swords/tabla_sword.tres" type="Resource" id=11]
+[ext_resource path="res://Levels/Nivele/Lvl2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/RAT.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/BeardGuy.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 156.469, 194.729 )
@@ -48,6 +51,7 @@ tile_data = PoolIntArray( -2490348, 4, 0, -2162705, -536870906, 0, -2097170, 536
 
 [node name="LevelChanger" parent="." instance=ExtResource( 7 )]
 position = Vector2( 428.77, -396.448 )
+next_level = ExtResource( 12 )
 
 [node name="PickableSwords" parent="." instance=ExtResource( 8 )]
 position = Vector2( -129.462, -339.105 )
@@ -302,6 +306,12 @@ position = Vector2( 220.164, -55.4374 )
 [node name="Door2" parent="WaveController7/Doors" index="1" instance=ExtResource( 3 )]
 position = Vector2( -90.4206, -116.984 )
 rotation = -1.57079
+
+[node name="Rat" parent="." instance=ExtResource( 13 )]
+position = Vector2( -532.167, 187.501 )
+
+[node name="BeardGuy" parent="." instance=ExtResource( 14 )]
+position = Vector2( 130.661, -140.35 )
 
 [editable path="tilemapactual"]
 [editable path="WaveController"]

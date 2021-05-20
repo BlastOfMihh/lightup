@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NewTilemap/new_tilemap.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://ScenesNScripts/Waves/Wave/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ScenesNScripts/Sword/Pickable/PickableSword.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Resources/Swords/tabla_sword.tres" type="Resource" id=10]
+[ext_resource path="res://Levels/Nivele/Lvl3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/RAT.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/BeardGuy.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 106.189, 124.834 )
@@ -42,6 +45,7 @@ tile_data = PoolIntArray( -2752472, 536870919, 0, -2752471, 1, 0, -2752470, 1, 0
 
 [node name="LevelChanger" parent="." instance=ExtResource( 3 )]
 position = Vector2( 761.765, -588.172 )
+next_level = ExtResource( 11 )
 
 [node name="WaveController" parent="." instance=ExtResource( 6 )]
 position = Vector2( -253.984, -40.4787 )
@@ -374,6 +378,12 @@ count = 100
 [node name="PickableSwords4" parent="." instance=ExtResource( 9 )]
 position = Vector2( -361.491, 166.605 )
 count = 200
+
+[node name="Rat" parent="." instance=ExtResource( 12 )]
+position = Vector2( -313.708, 136.185 )
+
+[node name="BeardGuy" parent="." instance=ExtResource( 13 )]
+position = Vector2( -521.708, -367.815 )
 
 [editable path="new_tilemap"]
 [editable path="WaveController"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://NewTilemap/new_tilemap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScenesNScripts/Dungeon/Pieces/LevelChanger.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://ScenesNScripts/Spawn/SpawnEntity.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ScenesNScripts/Waves/Wave/Wave.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ScenesNScripts/Actor/Actor.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/RAT.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ScenesNScripts/NPCs/BeardGuy/BeardGuy.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 200.297, 200 )
@@ -24,6 +26,15 @@ tile_data = PoolIntArray( -1310693, 6, 0, -1114090, 4, 0, -1114086, 536870916, 0
 
 [node name="LevelChanger" parent="." instance=ExtResource( 2 )]
 position = Vector2( 388.453, -327.152 )
+
+[node name="Rat" parent="LevelChanger" instance=ExtResource( 9 )]
+position = Vector2( -28.453, -48.848 )
+
+[node name="Rat2" parent="LevelChanger" instance=ExtResource( 9 )]
+position = Vector2( -348.453, 295.152 )
+
+[node name="BeardGuy" parent="LevelChanger" instance=ExtResource( 10 )]
+position = Vector2( 51.547, -48.848 )
 
 [node name="WaveController" parent="." instance=ExtResource( 3 )]
 position = Vector2( 384, 0 )
