@@ -6,7 +6,7 @@
 [ext_resource path="res://ScenesNScripts/Sword/Pickable/PickableSword.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ScenesNScripts/Levels/idk.gd" type="Script" id=5]
 [ext_resource path="res://Resources/Swords/gold_sword.tres" type="Resource" id=6]
-[ext_resource path="res://ScenesNScripts/Enemies/Archer/Archer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ScenesNScripts/Enemies/GlassArcher.tscn" type="PackedScene" id=7]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2( 19.8526, -1.87289 )
@@ -41,12 +41,10 @@ z_index = 4096
 position = Vector2( 117.385, 56.7092 )
 count = 70
 
-[node name="Archer" parent="." instance=ExtResource( 9 )]
-position = Vector2( 393.982, 20.4576 )
-damage = 6
-fire_time = 1
-
 [node name="PickableSwords3" parent="." instance=ExtResource( 4 )]
-position = Vector2( -8, 0 )
+position = Vector2( -21.2433, 9.53516 )
 sword = ExtResource( 6 )
 count = 100
+
+[node name="MeleeArcher" parent="." instance=ExtResource( 7 )]
+position = Vector2( 306.185, 126.606 )

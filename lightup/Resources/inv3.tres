@@ -1,9 +1,7 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" load_steps=2 format=2]
 
 [ext_resource path="res://Resources/inventory.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Swords/gold_sword.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Swords/feather_sword.tres" type="Resource" id=3]
 
 [resource]
 script = ExtResource( 1 )
-items = [ ExtResource( 3 ), ExtResource( 2 ), null, null, null, null, null, null, null ]
+items = [ null, null, null, null, null, null, null, null, null ]
