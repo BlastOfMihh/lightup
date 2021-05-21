@@ -89,7 +89,7 @@ position = Vector2( -15.0137, -11.1488 )
 [node name="SMShower" parent="." instance=ExtResource( 6 )]
 
 [node name="Visuals" type="Node2D" parent="."]
-modulate = Color( 1, 0.113725, 0.113725, 1 )
+modulate = Color( 1, 0.172549, 0.0901961, 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Visuals"]
 frames = SubResource( 3 )
