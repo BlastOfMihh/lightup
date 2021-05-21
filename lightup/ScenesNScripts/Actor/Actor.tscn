@@ -67,15 +67,15 @@ animations = [ {
 "name": "walk_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 45 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 28 ), ExtResource( 44 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ) ],
-"loop": false,
-"name": "Dead",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "stand",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 28 ), ExtResource( 44 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 17 ) ],
 "loop": true,
@@ -170,7 +170,7 @@ active = true
 script = ExtResource( 12 )
 
 [node name="Stagger" parent="StateMachine" instance=ExtResource( 13 )]
-stagger_time = 0.6
+stagger_time = 0.3
 
 [node name="RotatingAttack" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
