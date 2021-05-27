@@ -15,7 +15,7 @@ fire_time = 0.3
 modulate = Color( 0.972549, 0.113725, 1, 1 )
 
 [node name="DestroyTimer" parent="." instance=ExtResource( 2 )]
-wait_time = 4.0
+wait_time = 3.78435e+06
 
 [editable path="Archer"]
 [editable path="Archer/HurtBox"]

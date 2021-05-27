@@ -248,7 +248,6 @@ current = true
 
 [node name="SwordHandler" type="Node" parent="."]
 script = ExtResource( 6 )
-sword_count = 0
 
 [node name="SwordRooster" type="Node2D" parent="SwordHandler"]
 position = Vector2( -64.139, -27.7417 )
